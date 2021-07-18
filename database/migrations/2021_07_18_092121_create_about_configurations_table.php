@@ -17,7 +17,10 @@ class CreateAboutConfigurationsTable extends Migration
             $table->id();
             $table->string('about_us_title');
             $table->string('about_us_subtitle');
+            $table->string('image_about',255);
             $table->string('about_us_desc',1024);
+
+
             $table->timestamps();
         });
     }

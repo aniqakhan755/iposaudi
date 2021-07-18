@@ -1,0 +1,96 @@
+.menu-w .logo-w img {
+    width: 110px;
+}
+
+.menu-w.sub-menu-style-flyout .sub-menu-header {
+    font-size: 1rem;
+}
+
+.color-red {
+    color: #e65252;
+}
+
+.header-reduced-margin .element-header {
+    margin-bottom: 1rem;
+}
+
+.element-box-shadow {
+    box-shadow: 0 3px 6px rgb(42 93 206 / 15%);
+}
+
+.form-desc-color {
+    color: #696565;
+    font-weight: 400;
+}
+
+.wrapper-pb {
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 1650px) {
+    .content-box {
+        padding: 1rem;
+    }
+}
+
+.table.table-padded tbody tr:hover {
+    box-shadow: 0 2px 5px #ccd9e8;
+    color: blue;
+}
+
+.table.table-padded tbody tr:hover .lighter {
+    color: darkgrey;
+}
+
+.table.table-padded tbody .smaller {
+    font-size: 0.9rem;
+}
+
+.profile-desc-font {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #999;
+    display: block;
+}
+
+.iti {
+    width: 100% !important;
+}
+
+.profile-links-align {
+    text-align: left;
+    font-size: 16px;
+}
+
+.profile-icon-font {
+    font-size: 18px !important;
+    color: #047bf8;
+    margin-bottom: 2px !important;
+    margin-top: 2px !important;
+}
+
+.custom-pipeline-body {
+    min-height: auto;
+}
+
+.el-pt {
+    padding-top: 12%;
+}
+
+.recent-order-padding {
+    padding: 0 1rem 1rem 1rem;
+}
+
+@media (max-width: 767px) {
+    .booking-controls .form-control {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+.controls-above-table .btn-submit {
+    margin-right: 0.5rem;
+    margin-top: 0.1rem;
+}
+.step-contents .step-content {
+    display: block;
+}

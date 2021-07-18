@@ -15,7 +15,7 @@
                         <h6 class="element-header">
                             Manage Sliders
                         </h6>
-                        <form action="{{route('sliders.post')}}" method="post">
+                        <form action="{{route('sliders.post')}}" method="post" enctype="multipart/form-data">
                             @csrf
                         <div class="element-content">
                             <div class="row">
@@ -28,12 +28,12 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label for="">Title</label>
-                                                        <input class="form-control" placeholder="Title" type="text" name="sl_title_1">
+                                                        <input class="form-control" placeholder="Title" type="text" value="{{$slider_configuration->sl_title_1}}" name="sl_title_1">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label for="">SubTitle</label><input class="form-control" placeholder="SubTitle" type="text" name="sl_subtitle_1">
+                                                        <label for="">SubTitle</label><input class="form-control" value="{{$slider_configuration->sl_subtitle_1}}" placeholder="SubTitle" type="text" name="sl_subtitle_1">
                                                     </div>
                                                 </div>
                                             </div>
@@ -52,12 +52,12 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label for="">Title</label>
-                                                        <input class="form-control" placeholder="Title" type="text" name="sl_title_2">
+                                                        <input class="form-control" placeholder="Title" type="text" value="{{$slider_configuration->sl_title_2}}" name="sl_title_2">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label for="">SubTitle</label><input class="form-control" placeholder="SubTitle" type="text" name="sl_subtitle_2">
+                                                        <label for="">SubTitle</label><input class="form-control" value="{{$slider_configuration->sl_title_2}}" placeholder="SubTitle" type="text" name="sl_subtitle_2">
                                                     </div>
                                                 </div>
                                             </div>

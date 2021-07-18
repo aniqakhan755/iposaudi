@@ -55,9 +55,9 @@ $.extend( true, DataTable.defaults, {
 
 /* Default class modification */
 $.extend( DataTable.ext.classes, {
-	sWrapper:      "dataTables_wrapper form-inline dt-bootstrap",
-	sFilterInput:  "form-control input-sm",
-	sLengthSelect: "form-control input-sm",
+	sWrapper:      "dataTables_wrapper container-fluid dt-bootstrap4",
+	sFilterInput:  "form-control form-control-sm",
+	sLengthSelect: "form-control form-control-sm",
 	sProcessing:   "dataTables_processing panel panel-default"
 } );
 
@@ -128,7 +128,7 @@ DataTable.ext.renderer.pageButton.bootstrap = function ( settings, host, idx, bu
 
 				if ( btnDisplay ) {
 					node = $('<li>', {
-							'class': classes.sPageButton+' '+btnClass,
+							'class': classes.sPageButton+' '+btnClass+ 'page-item',
 							'id': idx === 0 && typeof button === 'string' ?
 								settings.sTableId +'_'+ button :
 								null
@@ -138,7 +138,8 @@ DataTable.ext.renderer.pageButton.bootstrap = function ( settings, host, idx, bu
 								'aria-controls': settings.sTableId,
 								'aria-label': aria[ button ],
 								'data-dt-idx': counter,
-								'tabindex': settings.iTabIndex
+								'tabindex': settings.iTabIndex,
+                                'class': 'page-link'
 							} )
 							.html( btnDisplay )
 						)
@@ -155,7 +156,7 @@ DataTable.ext.renderer.pageButton.bootstrap = function ( settings, host, idx, bu
 	};
 
 	// IE9 throws an 'unknown error' if document.activeElement is used
-	// inside an iframe or frame. 
+	// inside an iframe or frame.
 	var activeEl;
 
 	try {

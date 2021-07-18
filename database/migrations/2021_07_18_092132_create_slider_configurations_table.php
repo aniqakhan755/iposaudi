@@ -16,6 +16,8 @@ class CreateSliderConfigurationsTable extends Migration
         Schema::create('slider_configurations', function (Blueprint $table) {
             $table->id();
             $table->string('sl_subtitle_1');
+            $table->string('image_slider1',255);
+            $table->string('image_slider2',255);
             $table->string('sl_title_1');
             $table->string('sl_subtitle_2');
             $table->string('sl_title_2');

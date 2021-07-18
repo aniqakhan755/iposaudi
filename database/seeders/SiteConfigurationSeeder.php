@@ -18,6 +18,8 @@ class SiteConfigurationSeeder extends Seeder
 
        DB::table('slider_configurations')->insert([
             'sl_subtitle_1' => 'Your People, Our System',
+            'image_slider1'=> '1.jpg',
+            'image_slider2'=> '2.jpg',
             'sl_title_1' => 'We explore your ability and employment solutions',
             'sl_title_2' => 'We Ensure Balancing Employee and Managing Your HR Rules',
             'sl_subtitle_2' => 'Your People, Our System',
@@ -26,6 +28,7 @@ class SiteConfigurationSeeder extends Seeder
         DB::table('about_configurations')->insert([
             'about_us_title' => 'Choose Reobiz For Your',
             'about_us_subtitle' => 'HR Management',
+            'image_about' => 'h8-left-img.jpg',
             'about_us_desc' => 'Id hinc sapientem eam, has novum putent an. Ei sit definiebas concludaturque, cum ad sanctus ocurreret. Wisi eruditi democritum est an, porro noluisse ut pri, ne tantas essent corpora vel. Ponderum recusabo vim te. Elitr verear praesent has ne.',
 
         ]);

@@ -131,7 +131,7 @@
             <div id="rs-slider" class="rs-slider slider8">
                 <div class="slider-carousel owl-carousel">
                     <!-- Slide 1 -->
-                    <div class="slider slide1">
+                    <div class="slider slide1" style="background-image: url('assets/images/slider/{{$slider_configuration->image_slider1}}');">
                         <div class="container">
                             <div class="content-part">
                                 <div class="slider-des">
@@ -148,7 +148,7 @@
                         </div>
                     </div>
                     <!-- Slide 2 -->
-                    <div class="slider slide2">
+                    <div class="slider slide2" style="background-image: url('assets/images/slider/{{$slider_configuration->image_slider2}}');">
                         <div class="container">
                             <div class="content-part">
                                 <div class="slider-des">
@@ -282,7 +282,7 @@
                     <div class="row y-middle">
                         <div class="col-lg-6 md-mb-30">
                             <div class="image-part">
-                                <img src="assets/images/about/h8-left-img.jpg" alt="">
+                                <img src="{{asset('assets/images/about/'.$about_configuration->image_about)}}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 pl-50 lg-pl-35 md-pl-15">

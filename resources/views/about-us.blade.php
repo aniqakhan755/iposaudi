@@ -15,6 +15,8 @@
                         <h6 class="element-header">
                             Manage About
                         </h6>
+                        <form action="{{route('about.post')}}" method="post" enctype="multipart/form-data">
+                            @csrf
                         <div class="element-content">
                             <div class="row">
                                 <div class="col-12">
@@ -26,12 +28,12 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label for="">Title</label>
-                                                        <input class="form-control" placeholder="Title" type="text" name="about_us_title">
+                                                        <input class="form-control" placeholder="Title" type="text" name="about_us_title" value="{{$about_configuration->about_us_title}}">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label for="">SubTitle</label><input class="form-control" placeholder="SubTitle" type="text" name="about_us_subtitle">
+                                                        <label for="">SubTitle</label><input class="form-control" placeholder="SubTitle" type="text" value="{{$about_configuration->about_us_subtitle}}" name="about_us_subtitle">
                                                     </div>
                                                 </div>
                                             </div>
@@ -68,6 +70,7 @@
 
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
