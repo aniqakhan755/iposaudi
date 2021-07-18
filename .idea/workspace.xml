@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="dbddb829-861a-4aa2-878b-2bcd5d9378d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_07_17_201244_create_site_configurations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_07_17_201244_create_site_configurations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/mobile-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/mobile-menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/side-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/side-menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard-template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard-template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteConfigurationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteConfigurationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_07_17_201244_create_site_configurations_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/manage-services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/manage-services.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/manage-sliders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/manage-sliders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,18 +185,33 @@
       <option name="presentableId" value="Default" />
       <updated>1626552814991</updated>
       <workItem from="1626552817216" duration="7443000" />
-      <workItem from="1626596955586" duration="1857000" />
+      <workItem from="1626596955586" duration="9838000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="666" y="313" width="587" height="534" key="find.popup" timestamp="1626598151203">
+    <state x="690" y="334" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1626601958776">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="666" y="313" width="587" height="534" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1626598151203" />
+    <state x="690" y="334" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1626601958776" />
+    <state x="666" y="313" width="587" height="534" key="find.popup" timestamp="1626601949872">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="666" y="313" width="587" height="534" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1626601949872" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

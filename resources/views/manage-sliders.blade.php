@@ -15,6 +15,8 @@
                         <h6 class="element-header">
                             Manage Sliders
                         </h6>
+                        <form action="{{route('sliders.post')}}" method="post">
+                            @csrf
                         <div class="element-content">
                             <div class="row">
                                 <div class="col-12">
@@ -82,6 +84,7 @@
 
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>

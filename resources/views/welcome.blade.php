@@ -135,8 +135,8 @@
                         <div class="container">
                             <div class="content-part">
                                 <div class="slider-des">
-                                    <div class="sl-subtitle mb-16">Your People, Our System</div>
-                                    <h1 class="sl-title mb-0">We explore your ability and employment solutions</h1>
+                                    <div class="sl-subtitle mb-16">{{$slider_configuration->sl_subtitle_1}}</div>
+                                    <h1 class="sl-title mb-0">{{$slider_configuration->sl_title_1}}</h1>
                                 </div>
                                 <div class="slider-bottom mt-40">
                                     <ul>
@@ -152,8 +152,8 @@
                         <div class="container">
                             <div class="content-part">
                                 <div class="slider-des">
-                                    <div class="sl-subtitle mb-16">Your People, Our System</div>
-                                    <h1 class="sl-title mb-0">We Ensure Balancing Employee  and Managing Your HR Rules</h1>
+                                    <div class="sl-subtitle mb-16">{{$slider_configuration->sl_subtitle_2}}</div>
+                                    <h1 class="sl-title mb-0">{{$slider_configuration->sl_title_2}}</h1>
                                 </div>
                                 <div class="slider-bottom mt-40">
                                     <ul>
@@ -288,9 +288,9 @@
                         <div class="col-lg-6 pl-50 lg-pl-35 md-pl-15">
                             <div class="sec-title">
                                 <div class="sub-title gray-color">About Us</div>
-                                <h2 class="title mb-30">Choose Reobiz For Your <span class="d-block blue-color">HR Management</span></h2>
+                                <h2 class="title mb-30">{{$about_configuration->about_us_title}} <span class="d-block blue-color">{{$about_configuration->about_us_subtitle}} </span></h2>
                                 <p class="desc2">Creation timelines for the standard lorem ipsum passage vary, with some citing the 15th century and others the 20th.</p>
-                                <div class="desc">Id hinc sapientem eam, has novum putent an. Ei sit definiebas concludaturque, cum ad sanctus ocurreret. Wisi eruditi democritum est an, porro noluisse ut pri, ne tantas essent corpora vel. Ponderum recusabo vim te. Elitr verear praesent has ne.</div>
+                                <div class="desc">{{$about_configuration->about_us_desc}}</div>
                                 <div class="btn-part mt-45">
                                     <a class="readon blue-btn" href="#">Discover More</a>
                                 </div>
@@ -314,8 +314,8 @@
                                 <div class="icon-part">
                                     <img src="assets/images/services/style9/1.png" alt="">
                                 </div>
-                                <h5 class="title"><a href="#">Employment Services</a></h5>
-                                <div class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</div>
+                                <h5 class="title"><a href="#">{{$service_configuration->service_title_1}}</a></h5>
+                                <div class="desc">{{$service_configuration->service_desc_1}}</div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-16">
@@ -323,8 +323,8 @@
                                 <div class="icon-part">
                                     <img src="assets/images/services/style9/2.png" alt="">
                                 </div>
-                                <h5 class="title"><a href="#">Gaining Experience</a></h5>
-                                <div class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</div>
+                                <h5 class="title"><a href="#">{{$service_configuration->service_title_2}}</a></h5>
+                                <div class="desc">{{$service_configuration->service_desc_2}}</div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-16">
@@ -332,8 +332,8 @@
                                 <div class="icon-part">
                                     <img src="assets/images/services/style9/3.png" alt="">
                                 </div>
-                                <h5 class="title"><a href="#">Technology Evaluation</a></h5>
-                                <div class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</div>
+                                <h5 class="title"><a href="#">{{$service_configuration->service_title_3}}</a></h5>
+                                <div class="desc">{{$service_configuration->service_desc_3}}</div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-16">
@@ -341,8 +341,8 @@
                                 <div class="icon-part">
                                     <img src="assets/images/services/style9/4.png" alt="">
                                 </div>
-                                <h5 class="title"><a href="#">Finding Job</a></h5>
-                                <div class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</div>
+                                <h5 class="title"><a href="#">{{$service_configuration->service_title_4}}</a></h5>
+                                <div class="desc">{{$service_configuration->service_desc_4}}</div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-16">
@@ -350,8 +350,8 @@
                                 <div class="icon-part">
                                     <img src="assets/images/services/style9/5.png" alt="">
                                 </div>
-                                <h5 class="title"><a href="#">Team Leadership</a></h5>
-                                <div class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</div>
+                                <h5 class="title"><a href="#">{{$service_configuration->service_title_5}}</a></h5>
+                                <div class="desc">{{$service_configuration->service_desc_5}}</div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-16">
@@ -359,8 +359,8 @@
                                 <div class="icon-part">
                                     <img src="assets/images/services/style9/6.png" alt="">
                                 </div>
-                                <h5 class="title"><a href="#">Better Communication</a></h5>
-                                <div class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</div>
+                                <h5 class="title"><a href="#">{{$service_configuration->service_title_6}}</a></h5>
+                                <div class="desc">{{$service_configuration->service_desc_6}}</div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-16">
@@ -368,8 +368,8 @@
                                 <div class="icon-part">
                                     <img src="assets/images/services/style9/7.png" alt="">
                                 </div>
-                                <h5 class="title"><a href="#">Vocational Training</a></h5>
-                                <div class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</div>
+                                <h5 class="title"><a href="#">{{$service_configuration->service_title_7}}</a></h5>
+                                <div class="desc">{{$service_configuration->service_desc_7}}</div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-16">
@@ -377,8 +377,8 @@
                                 <div class="icon-part">
                                     <img src="assets/images/services/style9/8.png" alt="">
                                 </div>
-                                <h5 class="title"><a href="#">Employablility Training</a></h5>
-                                <div class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</div>
+                                <h5 class="title"><a href="#">{{$service_configuration->service_title_8}}</a></h5>
+                                <div class="desc">{{$service_configuration->service_desc_8}}</div>
                             </div>
                         </div>
                     </div>
