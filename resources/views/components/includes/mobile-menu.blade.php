@@ -11,22 +11,12 @@
         </div>
     </div>
     <div class="menu-and-user">
-        <div class="logged-user-w">
-            <div class="avatar-w">
-{{--                <img alt="" src="{{asset('img/avatar1.jpg')}}">--}}
-            </div>
-            <div class="logged-user-info-w">
-                <div class="logged-user-name">
-                {{Auth::user()->name}}
-                </div>
-            </div>
-        </div>
         <!--------------------
         START - Mobile Menu List
         -------------------->
         <ul class="main-menu">
             <li>
-                <a href="">{{route('home')}}
+                <a href="{{route('home')}}">
                     <div class="icon-w">
                         <div class="os-icon os-icon-layout"></div>
                     </div>

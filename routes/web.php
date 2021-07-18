@@ -22,3 +22,4 @@ Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/sliders', [App\Http\Controllers\SiteConfigurationController::class, 'manageSliders'])->name('manage.sliders');
 Route::get('/about', [App\Http\Controllers\SiteConfigurationController::class, 'manageAbout'])->name('manage.about');
+Route::get('/services', [App\Http\Controllers\SiteConfigurationController::class, 'manageServices'])->name('manage.services');

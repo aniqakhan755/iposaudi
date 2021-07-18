@@ -38,6 +38,16 @@
                                             <div class="row">
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
+                                                        <label for="">About Desc</label>
+
+
+                                                        <textarea cols="80" id="ckeditor1" name="about_us_desc" rows="10"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
                                                         <label for="">Upload About Image</label>
                                                         <input type="file" class="form-control" id="myFile" name="image_about">
                                                     </div>

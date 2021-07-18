@@ -21,8 +21,7 @@ class CreateSiteConfigurationsTable extends Migration
             $table->string('sl_title_2');
             $table->string('about_us_title');
             $table->string('about_us_subtitle');
-            $table->string('about_us_desc_1');
-            $table->string('about_us_desc_2');
+            $table->string('about_us_desc');
             $table->string('service_title_1',25);
             $table->string('service_title_2',25);
             $table->string('service_title_3',25);

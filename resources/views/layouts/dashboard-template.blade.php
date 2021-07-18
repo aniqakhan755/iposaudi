@@ -30,7 +30,7 @@
     <link href="{{ asset('icon_fonts_assets/feather/style.css')}}" rel="stylesheet">
     @yield('styles')
 </head>
-<body class="menu-position-side menu-side-left full-screen with-content-panel">
+<body class="menu-position-side menu-side-left full-screen">
     <div class="all-wrapper with-side-panel solid-bg-all">
         <div class="layout-w">
             @include('components.includes.mobile-menu')
@@ -38,9 +38,6 @@
             <div class="content-w">
                 @include('components.includes.top-bar')
                 @yield('content')
-                <div class="content-panel-toggler">
-                    <i class="os-icon os-icon-grid-squares-22"></i><span>Sidebar</span>
-                </div>
             </div>
         </div>
     </div>
