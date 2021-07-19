@@ -289,8 +289,8 @@
                             <div class="sec-title">
                                 <div class="sub-title gray-color">About Us</div>
                                 <h2 class="title mb-30">{{$about_configuration->about_us_title}} <span class="d-block blue-color">{{$about_configuration->about_us_subtitle}} </span></h2>
-                                <p class="desc2">Creation timelines for the standard lorem ipsum passage vary, with some citing the 15th century and others the 20th.</p>
-                                <div class="desc">{{$about_configuration->about_us_desc}}</div>
+{{--                                <p class="desc2"><?php echo($about_configuration->about_us_desc) ?></p>--}}
+                                <div class="desc"><?php echo($about_configuration->about_us_desc) ?></div>
                                 <div class="btn-part mt-45">
                                     <a class="readon blue-btn" href="#">Discover More</a>
                                 </div>

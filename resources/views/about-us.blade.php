@@ -43,7 +43,7 @@
                                                         <label for="">About Desc <span class="color-red">*</span></label>
 
 
-                                                        <textarea cols="80" id="ckeditor1" name="about_us_desc" rows="10"></textarea>
+                                                        <textarea cols="80" id="ckeditor1" name="about_us_desc" rows="10"><?php echo($about_configuration->about_us_desc)?></textarea>
                                                     </div>
                                                 </div>
                                             </div>
