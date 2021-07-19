@@ -51,35 +51,34 @@ class SiteConfigurationController extends Controller
         $filename_new_1 = '';
         $filename_new_2 = '';
         $slider_configuration = (new SliderConfiguration)->where('id', 1)->first();
-
-
         $filename_1 = public_path('assets/images/slider/') . $slider_configuration->image_slider1;
         $filename_2 = public_path('assets/images/slider/') . $slider_configuration->image_slider2;
+        if ($request->has('image_slider1')) {
+            if (File::exists($filename_1)) {
+                File::delete($filename_1);  // or unlink($filename);
 
 
-        if (File::exists($filename_1)) {
-            File::delete($filename_1);  // or unlink($filename);
-
-
-        }
-        $filename_new_1 = "1" . '.' . $request->file('image_slider1')->getClientOriginalExtension();
-        Image::make($request->file('image_slider1'))->save(public_path('assets/images/slider/' . $filename_new_1));
-
-
-        if (File::exists($filename_2)) {
-            File::delete($filename_2);  // or unlink($filename);
-
-
+            }
+            $filename_new_1 = "1" . '.' . $request->file('image_slider1')->getClientOriginalExtension();
+            Image::make($request->file('image_slider1'))->save(public_path('assets/images/slider/' . $filename_new_1));
 
         }
-        $filename_new_2 = "2" . '.' . $request->file('image_slider1')->getClientOriginalExtension();
-        Image::make($request->file('image_slider2'))->save(public_path('assets/images/slider/' . $filename_new_2));
+        if ($request->has('image_slider2')) {
+            if (File::exists($filename_2)) {
+                File::delete($filename_2);  // or unlink($filename);
+
+
+            }
+            $filename_new_2 = "2" . '.' . $request->file('image_slider2')->getClientOriginalExtension();
+            Image::make($request->file('image_slider2'))->save(public_path('assets/images/slider/' . $filename_new_2));
+
+        }
 
 
         $slider_configuration->update([
             'sl_subtitle_1' => $request->sl_subtitle_1,
-            'image_slider1' => $filename_new_1,
-            'image_slider2' => $filename_new_2,
+            'image_slider1' => ($request->has('image_slider1')) ? ($filename_new_1) : ($slider_configuration->image_slider1),
+            'image_slider2' => ($request->has('image_slider2')) ? ($filename_new_2) : ($slider_configuration->image_slider2),
             'sl_subtitle_2' => $request->sl_subtitle_2,
             'sl_title_1' => $request->sl_title_1,
             'sl_title_2' => $request->sl_title_2,
@@ -96,17 +95,19 @@ class SiteConfigurationController extends Controller
         $filename_1 = public_path('assets/images/about/') . $about_configuration->image_about;
 
         $filename_new_1 = '';
-        if (File::exists($filename_1)) {
-            File::delete($filename_1);  // or unlink($filename);
-        }
-        $filename_new_1 = "about_image" . '.' . $request->file('image_about')->getClientOriginalExtension();
+        if ($request->has('image_about')) {
+            if (File::exists($filename_1)) {
+                File::delete($filename_1);  // or unlink($filename);
+            }
+            $filename_new_1 = "about_image" . '.' . $request->file('image_about')->getClientOriginalExtension();
 
-        Image::make($request->file('image_about'))->save(public_path('assets/images/about/' . $filename_new_1));
+            Image::make($request->file('image_about'))->save(public_path('assets/images/about/' . $filename_new_1));
+        }
         $about_configuration->update([
             'about_us_title' => $request->about_us_title,
             'about_us_subtitle' => $request->about_us_subtitle,
             'about_us_desc' => $request->about_us_desc,
-            'image_about' => $filename_new_1,
+            'image_about' => ($request->has('image_about')) ? ($filename_new_1) : ($about_configuration->image_about),
 
 
         ]);
