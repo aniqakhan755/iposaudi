@@ -27,13 +27,13 @@
                                             <div class="row">
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label for="">Title</label>
-                                                        <input class="form-control" placeholder="Title" type="text" value="{{$slider_configuration->sl_title_1}}" name="sl_title_1">
+                                                        <label for="">Title <span class="color-red">*</span></label>
+                                                        <input class="form-control" required placeholder="Title" type="text" value="{{$slider_configuration->sl_title_1}}" name="sl_title_1">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label for="">SubTitle</label><input class="form-control" value="{{$slider_configuration->sl_subtitle_1}}" placeholder="SubTitle" type="text" name="sl_subtitle_1">
+                                                        <label for="">SubTitle <span class="color-red">*</span></label><input required class="form-control" value="{{$slider_configuration->sl_subtitle_1}}" placeholder="SubTitle" type="text" name="sl_subtitle_1">
                                                     </div>
                                                 </div>
                                             </div>
@@ -51,13 +51,13 @@
                                             <div class="row">
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label for="">Title</label>
-                                                        <input class="form-control" placeholder="Title" type="text" value="{{$slider_configuration->sl_title_2}}" name="sl_title_2">
+                                                        <label for="">Title <span class="color-red">*</span></label>
+                                                        <input class="form-control" required placeholder="Title" type="text" value="{{$slider_configuration->sl_title_2}}" name="sl_title_2">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label for="">SubTitle</label><input class="form-control" value="{{$slider_configuration->sl_title_2}}" placeholder="SubTitle" type="text" name="sl_subtitle_2">
+                                                        <label for="">SubTitle <span class="color-red">*</span></label><input required class="form-control" value="{{$slider_configuration->sl_title_2}}" placeholder="SubTitle" type="text" name="sl_subtitle_2">
                                                     </div>
                                                 </div>
                                             </div>

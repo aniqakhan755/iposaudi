@@ -60,18 +60,20 @@ class SiteConfigurationController extends Controller
         if (File::exists($filename_1)) {
             File::delete($filename_1);  // or unlink($filename);
 
-            $filename_new_1 = "1" . '.' . $request->file('image_slider1')->getClientOriginalExtension();
-            Image::make($request->file('image_slider1'))->save(public_path('assets/images/slider/' . $filename_new_1));
+
         }
+        $filename_new_1 = "1" . '.' . $request->file('image_slider1')->getClientOriginalExtension();
+        Image::make($request->file('image_slider1'))->save(public_path('assets/images/slider/' . $filename_new_1));
 
 
         if (File::exists($filename_2)) {
             File::delete($filename_2);  // or unlink($filename);
 
-            $filename_new_2 = "2" . '.' . $request->file('image_slider1')->getClientOriginalExtension();
-            Image::make($request->file('image_slider2'))->save(public_path('assets/images/slider/' . $filename_new_2));
+
 
         }
+        $filename_new_2 = "2" . '.' . $request->file('image_slider1')->getClientOriginalExtension();
+        Image::make($request->file('image_slider2'))->save(public_path('assets/images/slider/' . $filename_new_2));
 
 
         $slider_configuration->update([
@@ -92,14 +94,14 @@ class SiteConfigurationController extends Controller
     {
         $about_configuration = (new AboutConfiguration)->where('id', 1)->first();
         $filename_1 = public_path('assets/images/about/') . $about_configuration->image_about;
+
         $filename_new_1 = '';
         if (File::exists($filename_1)) {
             File::delete($filename_1);  // or unlink($filename);
-
-            $filename_new_1 = "about_image" . '.' . $request->file('image_about')->getClientOriginalExtension();
-            Image::make($request->file('image_slider1'))->save(public_path('assets/images/about/' . $filename_new_1));
         }
+        $filename_new_1 = "about_image" . '.' . $request->file('image_about')->getClientOriginalExtension();
 
+        Image::make($request->file('image_about'))->save(public_path('assets/images/about/' . $filename_new_1));
         $about_configuration->update([
             'about_us_title' => $request->about_us_title,
             'about_us_subtitle' => $request->about_us_subtitle,

@@ -27,20 +27,20 @@
                                             <div class="row">
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label for="">Title</label>
+                                                        <label for="">Title <span class="color-red">*</span></label>
                                                         <input class="form-control" placeholder="Title" type="text" name="about_us_title" value="{{$about_configuration->about_us_title}}">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label for="">SubTitle</label><input class="form-control" placeholder="SubTitle" type="text" value="{{$about_configuration->about_us_subtitle}}" name="about_us_subtitle">
+                                                        <label for="">SubTitle <span class="color-red">*</span></label><input class="form-control" placeholder="SubTitle" type="text" value="{{$about_configuration->about_us_subtitle}}" name="about_us_subtitle">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label for="">About Desc</label>
+                                                        <label for="">About Desc <span class="color-red">*</span></label>
 
 
                                                         <textarea cols="80" id="ckeditor1" name="about_us_desc" rows="10"></textarea>

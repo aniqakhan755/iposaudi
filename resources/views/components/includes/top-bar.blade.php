@@ -3,8 +3,8 @@
     START - Top Menu Controls
     -------------------->
     <div class="top-menu-controls">
-    
-  
+
+
         <div class="logged-user-w">
             <div class="logged-user-i">
                 <div class="avatar-w">
@@ -20,7 +20,7 @@
                                 {{ucwords(Auth::user()->name)}}
                             </div>
                             <div class="logged-user-role">
-                               
+
                             </div>
                         </div>
                     </div>

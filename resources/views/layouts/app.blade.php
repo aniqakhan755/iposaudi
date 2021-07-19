@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+
+    </style>
 </head>
 <body>
     <div id="app">
@@ -26,9 +29,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{asset('assets/images/logo-website.png')}}" alt="logo" style="width:50%;">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->

@@ -22,7 +22,7 @@ Route::get('/', function () {
     $service_configuration = (new ServiceConfiguration)->where('id',1)->first();
 
     return view('welcome',compact(['slider_configuration','about_configuration','service_configuration']));
-});
+})->name('welcome');
 
 Auth::routes();
 
