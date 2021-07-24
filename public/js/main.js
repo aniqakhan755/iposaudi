@@ -19,7 +19,7 @@ Main javascript functions to init most of the elements
 #13. EMAIL APP
 #14. FULL CHAT APP
 #15. CRM PIPELINE
-#16. OUR OWN CUSTOM DROPDOWNS 
+#16. OUR OWN CUSTOM DROPDOWNS
 #17. BOOTSTRAP RELATED JS ACTIVATIONS
 #18. TODO Application
 #19. Fancy Selector
@@ -198,9 +198,13 @@ $(function () {
   if ($('#ckeditor1').length) {
     CKEDITOR.replace('ckeditor1');
   } // #10. CHARTJS CHARTS http://www.chartjs.org/
+    if ($('#ckeditor2').length) {
+        CKEDITOR.replace('ckeditor2');
+    } // #10. CHARTJS CHARTS http://www.chartjs.org/
 
 
-  if (typeof Chart !== 'undefined') {
+
+    if (typeof Chart !== 'undefined') {
     var fontFamily = '"Proxima Nova W01", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'; // set defaults
 
     Chart.defaults.global.defaultFontFamily = fontFamily;
@@ -630,7 +634,7 @@ $(function () {
 
   $('.content-panel-toggler, .content-panel-close, .content-panel-open').on('click', function () {
     $('.all-wrapper').toggleClass('content-panel-active');
-  }); // #13. EMAIL APP 
+  }); // #13. EMAIL APP
 
   $('.more-messages').on('click', function () {
     $(this).hide();
@@ -701,7 +705,7 @@ $(function () {
       new_pipeline_body.removeClass('over');
       var old_pipeline_body = $(source).closest('.pipeline-body');
     });
-  } // #16. OUR OWN CUSTOM DROPDOWNS 
+  } // #16. OUR OWN CUSTOM DROPDOWNS
 
 
   $('.os-dropdown-trigger').on('mouseenter', function () {

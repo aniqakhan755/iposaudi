@@ -9,7 +9,7 @@
     <meta content="Admin dashboard html template" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="favicon.png" rel="shortcut icon">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/fav.png')}}">
     <link href="apple-touch-icon.png" rel="apple-touch-icon">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">

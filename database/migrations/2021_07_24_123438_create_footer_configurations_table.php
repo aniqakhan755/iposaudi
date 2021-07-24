@@ -20,7 +20,7 @@ class CreateFooterConfigurationsTable extends Migration
             $table->string('phone', 255);
             $table->string('email', 255);
             $table->string('time', 255)->nullable();
-            $table->text('footer_description');
+            $table->longText('footer_description');
             $table->string('facebook_url', 255)->default('#');
             $table->string('twitter_url', 255)->default('#');
             $table->string('instagram_url', 255)->default('#');

@@ -35,18 +35,33 @@
                 <span>Sliders</span></a>
         </li>
         <li>
+            <a href="{{route('manage.choose-us')}}">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-layout"></div>
+                </div>
+                <span>Choose Us</span></a>
+        </li>
+        <li>
             <a href="{{route('manage.about')}}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-layout"></div>
                 </div>
                 <span>About</span></a>
         </li>
+
         <li>
             <a href="{{route('manage.services')}}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-layout"></div>
                 </div>
                 <span>Services</span></a>
+        </li>
+        <li>
+            <a href="{{route('manage.footer')}}">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-layout"></div>
+                </div>
+                <span>Footer</span></a>
         </li>
 
 

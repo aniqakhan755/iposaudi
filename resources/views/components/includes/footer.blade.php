@@ -1,14 +1,14 @@
 <!-- Footer Start -->
-<footer id="rs-footer" class="rs-footer">
+<footer id="rs-footer" class="rs-footer" style="background-image: url('assets/images/footer/{{$footer_configuration->footer_bg}}');">
     <div class="container">
         <div class="footer-content pt-80 pb-79 md-pb-64">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 footer-widget md-mb-39">
                     <div class="about-widget pr-15">
                         <div class="logo-part">
-                            <a href="{{route('welcome')}}"><img src="{{asset('assets/images/logo-website.png')}}" alt="Footer Logo"></a>
+                            <a href="{{route('welcome')}}"><img style="margin-left: -35px;" src="{{asset('assets/images/logo-website.png')}}" alt="Footer Logo"></a>
                         </div>
-                        <p class="desc">We denounce with righteous indignation in and dislike men who are so beguiled and to demo realized by the charms of pleasure moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound.</p>
+                        <p class="desc"><?php echo($footer_configuration->footer_description) ?></p>
                         <div class="btn-part">
                             <a class="readon" href="#">Discover More</a>
                         </div>
@@ -33,12 +33,12 @@
                                 <a href="mailto:{{$footer_configuration->email}}">{{$footer_configuration->email}}</a>
                             </div>
                         </li>
-                        <li>
-                            <i class="flaticon-clock"></i>
-                            <div class="desc">
-                                {{$footer_configuration->time}}
-                            </div>
-                        </li>
+{{--                        <li>--}}
+{{--                            <i class="flaticon-clock"></i>--}}
+{{--                            <div class="desc">--}}
+{{--                                {{$footer_configuration->time}}--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
                     </ul>
                 </div>
             </div>

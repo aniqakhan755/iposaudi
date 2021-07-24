@@ -2510,7 +2510,7 @@ body.home-eight .full-width-header .rs-header .menu-area.sticky .expand-btn-inne
   background: #101010;
 }
 body.home-eight .rs-footer {
-  background-image: url(assets/images/bg/footer-bg3.jpg);
+  /*background-image: url(assets/images/bg/footer-bg3.jpg);*/
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9183,6 +9183,9 @@ body .modal-backdrop {
   font-weight: 400;
   color: #ffffff;
   margin-bottom: 0;
+}
+.rs-whychooseus ul {
+    list-style: unset !important;
 }
 /*---------------------------------------
     12. Featured Section CSS

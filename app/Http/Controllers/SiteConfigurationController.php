@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\AboutConfiguration;
+use App\Models\ChooseUsConfiguration;
+use App\Models\FooterConfiguration;
 use App\Models\ServiceConfiguration;
 use App\Models\SliderConfiguration;
 use Illuminate\Http\Request;
@@ -32,6 +34,11 @@ class SiteConfigurationController extends Controller
         $slider_configuration = (new SliderConfiguration)->where('id', 1)->first();
         return view('manage-sliders', compact('slider_configuration'));
     }
+    public function manageChooseUs()
+    {
+        $choose_configuration = (new ChooseUsConfiguration)->where('id', 1)->first();
+        return view('manage-choose-us', compact('choose_configuration'));
+    }
 
     public function manageAbout()
     {
@@ -42,9 +49,15 @@ class SiteConfigurationController extends Controller
 
     public function manageServices()
     {
-        $service_configuration = (new ServiceConfiguration)->where('id', 1)->first();
+        $service_configurations = (new ServiceConfiguration)->all();
 
-        return view('manage-services', compact('service_configuration'));
+        return view('manage-services', compact('service_configurations'));
+    }
+    public function manageFooter()
+    {
+        $footer_configuration = (new FooterConfiguration)->where('id', 1)->first();
+
+        return view('manage-footer', compact('footer_configuration'));
     }
 
     public function postSliders(Request $request)
@@ -140,31 +153,110 @@ class SiteConfigurationController extends Controller
 
     }
 
-    public
-    function postServices(Request $request)
+    public function postServices(Request $request)
     {
-        $service_configuration = (new ServiceConfiguration)->where('id', 1)->first();
+        $service_configuration = (new ServiceConfiguration)->where('id',$request->service_id)->first();
+
         $service_configuration->update([
-            'service_title_1' => $request->service_title_1,
-            'service_title_2' => $request->service_title_2,
-            'service_title_3' => $request->service_title_3,
-            'service_title_4' => $request->service_title_4,
-            'service_title_5' => $request->service_title_5,
-            'service_title_6' => $request->service_title_6,
-            'service_title_7' => $request->service_title_7,
-            'service_title_8' => $request->service_title_8,
-            'service_desc_1' => $request->service_desc_1,
-            'service_desc_2' => $request->service_desc_2,
-            'service_desc_3' => $request->service_desc_3,
-            'service_desc_4' => $request->service_desc_4,
-            'service_desc_5' => $request->service_desc_5,
-            'service_desc_6' => $request->service_desc_6,
-            'service_desc_7' => $request->service_desc_7,
-            'service_desc_8' => $request->service_desc_8,
+            'service_title' => $request->service_title,
+            'service_desc' => $request->service_desc,
 
 
         ]);
         return back()->withSuccess('Services Data Successfully Updated!');
+
+
+    }
+    public function postFooter(Request $request)
+    {
+
+        $footer_configuration = (new FooterConfiguration)->where('id',1)->first();
+        $validator = Validator::make($request->all(), [
+
+            'footer_bg' => 'nullable|image|mimes:jpeg,png,jpg',
+            'footer_description' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'facebook_url' => 'required',
+            'twitter_url' => 'required',
+            'instagram_url' => 'required',
+            'linked_in_url' => 'required',
+
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
+        }
+        $about_configuration = (new AboutConfiguration)->where('id', 1)->first();
+        $filename_1 = public_path('assets/images/footer/') . $about_configuration->footer_bg;
+
+        $filename_new_1 = '';
+        if ($request->has('footer_bg')) {
+            if (File::exists($filename_1)) {
+                File::delete($filename_1);  // or unlink($filename);
+            }
+            $filename_new_1 = "footer_bg" . '.' . $request->file('footer_bg')->getClientOriginalExtension();
+
+            Image::make($request->file('footer_bg'))->save(public_path('assets/images/footer/' . $filename_new_1));
+        }
+
+        $footer_configuration->update([
+            'footer_description' => $request->footer_description,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'address' => $request->address,
+            'facebook_url' => $request->facebook_url,
+            'twitter_url' => $request->twitter_url,
+            'instagram_url' => $request->instagram_url,
+            'linked_in_url' => $request->linked_in_url,
+            'footer_bg' => ($request->has('footer_bg')) ? ($filename_new_1) : ($about_configuration->footer_bg),
+
+
+        ]);
+            return back()->withSuccess('Footer Data Successfully Updated!');
+
+
+    }
+    public function postChooseUs(Request $request)
+    {
+
+        $choose_configuration = (new ChooseUsConfiguration)->where('id',1)->first();
+        $validator = Validator::make($request->all(), [
+            'image_choose_us' => 'nullable|image|mimes:jpeg,png,jpg',
+            'choose_us_title' => 'required',
+            'heading_1' => 'required',
+            'heading_2' => 'required',
+            'heading1_desc' => 'required',
+            'heading2_desc' => 'required',
+
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
+        }
+        $about_configuration = (new AboutConfiguration)->where('id', 1)->first();
+        $filename_1 = public_path('assets/images/whychooseus/') . $about_configuration->image_choose_us;
+
+        $filename_new_1 = '';
+        if ($request->has('image_choose_us')) {
+            if (File::exists($filename_1)) {
+                File::delete($filename_1);  // or unlink($filename);
+            }
+            $filename_new_1 = "image_choose_us" . '.' . $request->file('image_choose_us')->getClientOriginalExtension();
+
+            Image::make($request->file('image_choose_us'))->save(public_path('assets/images/whychooseus/' . $filename_new_1));
+        }
+
+        $choose_configuration->update([
+            'choose_us_title' => $request->choose_us_title,
+            'heading_1' =>  $request->heading_1,
+            'heading_2' =>  $request->heading_2,
+            'heading1_desc' =>  $request->heading1_desc,
+            'heading2_desc' =>  $request->heading2_desc,
+            'image_choose_us' => ($request->has('image_choose_us')) ? ($filename_new_1) : ($about_configuration->image_choose_us),
+        ]);
+        return back()->withSuccess('Choose Us Data Successfully Updated!');
 
 
     }
