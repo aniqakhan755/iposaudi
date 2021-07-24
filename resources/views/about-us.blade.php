@@ -51,7 +51,7 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label for="">Upload About Image</label>
-                                                        <input type="file" class="form-control" id="myFile" name="image_about">
+                                                        <input type="file" class="form-control" id="myFile" name="image_about" accept="image/png, image/gif, image/jpeg">
                                                     </div>
                                                 </div>
                                             </div>

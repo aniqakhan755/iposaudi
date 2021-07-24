@@ -7,6 +7,7 @@ use App\Models\ServiceConfiguration;
 use App\Models\SliderConfiguration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
 use Intervention\Image\ImageManagerStatic as Image;
 
 class SiteConfigurationController extends Controller
@@ -48,6 +49,16 @@ class SiteConfigurationController extends Controller
 
     public function postSliders(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+
+            'image_slider1' => 'nullable|image|mimes:jpeg,png,jpg',
+            'image_slider2' => 'nullable|image|mimes:jpeg,png,jpg',
+        ]);
+
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
+        }
         $filename_new_1 = '';
         $filename_new_2 = '';
         $slider_configuration = (new SliderConfiguration)->where('id', 1)->first();
@@ -91,6 +102,19 @@ class SiteConfigurationController extends Controller
 
     public function postAbout(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+
+            'image_about' => 'nullable|image|mimes:jpeg,png,jpg',
+            'about_us_title' => 'required',
+            'about_us_desc' => 'required',
+            'about_us_subtitle' => 'required',
+
+        ]);
+
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
+        }
         $about_configuration = (new AboutConfiguration)->where('id', 1)->first();
         $filename_1 = public_path('assets/images/about/') . $about_configuration->image_about;
 

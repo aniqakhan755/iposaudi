@@ -41,7 +41,7 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label for="">Upload Slider Image</label>
-                                                        <input type="file" class="form-control" id="myFile" name="image_slider1">
+                                                        <input type="file" class="form-control" id="myFile" name="image_slider1" accept="image/png, image/gif, image/jpeg">
                                                     </div>
                                                 </div>
                                             </div>
@@ -65,7 +65,7 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label for="">Upload Slider Image</label>
-                                                        <input type="file" class="form-control" id="myFile" name="image_slider2">
+                                                        <input type="file" class="form-control" id="myFile" name="image_slider2" accept="image/png, image/gif, image/jpeg">
                                                     </div>
                                                 </div>
                                             </div>

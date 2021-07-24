@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\AboutConfiguration;
+use App\Models\FooterConfiguration;
 use App\Models\ServiceConfiguration;
 use App\Models\SliderConfiguration;
 use Illuminate\Support\Facades\Route;
@@ -20,8 +21,9 @@ Route::get('/', function () {
     $slider_configuration = (new SliderConfiguration)->where('id',1)->first();
     $about_configuration = (new AboutConfiguration)->where('id',1)->first();
     $service_configuration = (new ServiceConfiguration)->where('id',1)->first();
+    $footer_configuration = (new FooterConfiguration)->where('id',1)->first();
 
-    return view('welcome',compact(['slider_configuration','about_configuration','service_configuration']));
+    return view('welcome',compact(['slider_configuration','about_configuration','service_configuration','footer_configuration']));
 })->name('welcome');
 
 Auth::routes();

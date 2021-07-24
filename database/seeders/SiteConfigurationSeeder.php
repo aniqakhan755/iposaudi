@@ -52,6 +52,15 @@ class SiteConfigurationSeeder extends Seeder
 
 
         ]);
+        DB::table('footer_configurations')->insert([
+            'footer_bg' => 'footer-bg3.jpg',
+            'address' => '374 William S Canning Blvd, Fall River MA 2721, USA',
+            'phone' => '(+880)173-9753105',
+            'email' => 'support@rstheme.com',
+            'time' => '10:00 - 17:00',
+            'footer_description' => 'We denounce with righteous indignation in and dislike men who are so beguiled and to demo realized by the charms of pleasure moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound.'
+        ]);
+
 
 
     }
