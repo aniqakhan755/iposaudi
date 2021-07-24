@@ -22,63 +22,7 @@
     <list default="true" id="dbddb829-861a-4aa2-878b-2bcd5d9378d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteConfigurationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteConfigurationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/FooterConfiguration.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/FooterConfiguration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_07_18_092121_create_about_configurations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_07_18_092121_create_about_configurations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_07_18_092146_create_service_configurations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_07_18_092146_create_service_configurations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_07_24_123438_create_footer_configurations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_07_24_123438_create_footer_configurations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/SiteConfigurationSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SiteConfigurationSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/apps/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/apps/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/apps/app-store.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/apps/play-store.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/apps/shape/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/apps/shape/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/apps/shape/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/apps/shape/circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/marketing/why-choose-17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style3/icons/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style3/icons/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style3/icons/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style3/img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style3/ly1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style3/ly2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style3/ly3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style4/icons/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style4/icons/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style4/right-img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style5/icons/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style5/icons/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style5/icons/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style5/main.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style6/icons/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style6/icons/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style6/icons/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style6/main.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style7/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style7/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style7/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style8/seo-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style8/shape/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/style8/shape/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/whychooseus/video-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/mobile-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/mobile-menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/side-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/side-menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home-sections/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home-sections/about-us.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home-sections/choose-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home-sections/choose-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home-sections/services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home-sections/services.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard-template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard-template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/manage-services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/manage-services.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +182,7 @@
       <updated>1626552814991</updated>
       <workItem from="1626552817216" duration="7443000" />
       <workItem from="1626596955586" duration="31670000" />
-      <workItem from="1627129962095" duration="19546000" />
+      <workItem from="1627129962095" duration="21856000" />
     </task>
     <servers />
   </component>
@@ -258,10 +202,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="334" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1626705467781">
+    <state x="690" y="334" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1627153819034">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="690" y="334" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1626705467781" />
+    <state x="690" y="334" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1627153819034" />
     <state x="561" y="190" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626700371632">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

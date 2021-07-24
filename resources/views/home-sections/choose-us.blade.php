@@ -6,18 +6,18 @@
                 <div class="sec-title mb-40">
                     <h2 class="title mb-18">{{$choose_configuration->choose_us_title}}</h2>
                 </div>
-                <?php $desc1 = strlen($choose_configuration->heading1_desc) > 180 ? substr($choose_configuration->heading1_desc,0,180)."......" : $choose_configuration->heading1_desc; ?>
-                <?php $desc2 = strlen($choose_configuration->heading2_desc) > 180 ? substr($choose_configuration->heading2_desc,0,180)."......" : $choose_configuration->heading2_desc; ?>
+                <?php $desc1 = strlen($choose_configuration->heading1_desc) > 160 ? substr($choose_configuration->heading1_desc,0,160)."......" : $choose_configuration->heading1_desc; ?>
+                <?php $desc2 = strlen($choose_configuration->heading2_desc) > 160 ? substr($choose_configuration->heading2_desc,0,160)."......" : $choose_configuration->heading2_desc; ?>
                 <div class="content-part mb-15">
                     <div class="text-part">
                         <h4 class="title blue-color">{{$choose_configuration->heading_1}}</h4>
-                        <div class="desc"><?php echo($desc1)?></div>
+                        <div class="desc"><?php echo($desc1)?> @if(strlen($choose_configuration->heading1_desc) > 160) <a href="{{route('choose-us.read-more')}}">Read More</a> @endif</div>
                     </div>
                 </div>
                 <div class="content-part">
                     <div class="text-part">
                         <h4 class="title blue-color">{{$choose_configuration->heading_2}}</h4>
-                        <div class="desc"><?php echo($desc2)?></div>
+                        <div class="desc"><?php echo($desc2)?> @if(strlen($choose_configuration->heading2_desc) > 160) <a href="{{route('choose-us.read-more')}}">Read More</a> @endif</div>
                     </div>
                 </div>
             </div>

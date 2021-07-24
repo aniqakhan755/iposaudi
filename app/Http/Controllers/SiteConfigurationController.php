@@ -60,6 +60,7 @@ class SiteConfigurationController extends Controller
         return view('manage-footer', compact('footer_configuration'));
     }
 
+
     public function postSliders(Request $request)
     {
         $validator = Validator::make($request->all(), [

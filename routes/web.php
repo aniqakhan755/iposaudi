@@ -36,6 +36,7 @@ Route::get('/about', [App\Http\Controllers\SiteConfigurationController::class, '
 Route::get('/services', [App\Http\Controllers\SiteConfigurationController::class, 'manageServices'])->name('manage.services');
 Route::get('/choose-us', [App\Http\Controllers\SiteConfigurationController::class, 'manageChooseUs'])->name('manage.choose-us');
 Route::get('/footer', [App\Http\Controllers\SiteConfigurationController::class, 'manageFooter'])->name('manage.footer');
+Route::get('/choose-us-read-more', [App\Http\Controllers\AboutController::class, 'chooseReadMore'])->name('choose-us.read-more');
 
 Route::post('/post-sliders', [App\Http\Controllers\SiteConfigurationController::class, 'postSliders'])->name('sliders.post');
 Route::post('/post-services', [App\Http\Controllers\SiteConfigurationController::class, 'postServices'])->name('services.post');
