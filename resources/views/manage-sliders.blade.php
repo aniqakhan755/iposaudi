@@ -57,7 +57,7 @@
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label for="">SubTitle <span class="color-red">*</span></label><input required class="form-control" value="{{$slider_configuration->sl_title_2}}" placeholder="SubTitle" type="text" name="sl_subtitle_2">
+                                                        <label for="">SubTitle <span class="color-red">*</span></label><input required class="form-control" value="{{$slider_configuration->sl_subtitle_2}}" placeholder="SubTitle" type="text" name="sl_subtitle_2">
                                                     </div>
                                                 </div>
                                             </div>

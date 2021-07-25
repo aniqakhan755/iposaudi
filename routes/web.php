@@ -3,6 +3,7 @@
 use App\Models\AboutConfiguration;
 use App\Models\ChooseUsConfiguration;
 use App\Models\FooterConfiguration;
+use App\Models\Heading;
 use App\Models\ServiceConfiguration;
 use App\Models\SliderConfiguration;
 use Illuminate\Support\Facades\Route;
@@ -24,8 +25,9 @@ Route::get('/', function () {
     $service_configurations = (new ServiceConfiguration)->all();
     $footer_configuration = (new FooterConfiguration)->where('id',1)->first();
     $choose_configuration = (new ChooseUsConfiguration)->where('id',1)->first();
+    $heading = (new Heading)->where('id',1)->first();
 
-    return view('welcome',compact(['slider_configuration','about_configuration','service_configurations','footer_configuration','choose_configuration']));
+    return view('welcome',compact(['slider_configuration','about_configuration','service_configurations','footer_configuration','choose_configuration','heading']));
 })->name('welcome');
 
 Auth::routes();
@@ -43,3 +45,4 @@ Route::post('/post-services', [App\Http\Controllers\SiteConfigurationController:
 Route::post('/post-about', [App\Http\Controllers\SiteConfigurationController::class, 'postAbout'])->name('about.post');
 Route::post('/post-footer', [App\Http\Controllers\SiteConfigurationController::class, 'postFooter'])->name('footer.post');
 Route::post('/post-choose-us', [App\Http\Controllers\SiteConfigurationController::class, 'postChooseUs'])->name('choose-us.post');
+Route::post('/post-services-heading', [App\Http\Controllers\SiteConfigurationController::class, 'postServicesHeading'])->name('services-heading.post');

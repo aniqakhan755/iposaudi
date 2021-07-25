@@ -19,6 +19,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
+        .vertical-padding{
+            padding-bottom: 10%;
+            padding-top: 15%;
+        }
 
     </style>
 </head>
@@ -76,7 +80,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="vertical-padding">
             @yield('content')
         </main>
     </div>

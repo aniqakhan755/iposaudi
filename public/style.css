@@ -2516,7 +2516,7 @@ body.home-eight .rs-footer {
   background-repeat: no-repeat;
 }
 body.home-eight .rs-footer .footer-content .widget-title {
-  color: #1c3988;
+  color: white;
 }
 body.home-eight .rs-footer .footer-content .about-widget .desc {
   color: #333;
@@ -2529,16 +2529,16 @@ body.home-eight .rs-footer .footer-content .about-widget .btn-part a.readon {
   font-weight: 500;
 }
 body.home-eight .rs-footer .footer-content .address-widget li i:before {
-  color: #1c3988;
+  color: white;
 }
 body.home-eight .rs-footer .footer-content .address-widget li .desc {
-  color: #333;
+  color: white;
 }
 body.home-eight .rs-footer .footer-content .address-widget li .desc a {
-  color: #333;
+  color: white;
 }
 body.home-eight .rs-footer .footer-content .address-widget li .desc a:hover {
-  color: #1c3988;
+  color: white;
 }
 body.home-eight .rs-footer .footer-content .footer-post .post-wrap .post-desc a {
   color: #1c1b1b;
@@ -2553,13 +2553,13 @@ body.home-eight .rs-footer .footer-content .footer-post .post-wrap .post-desc .d
   color: #1c3988;
 }
 body.home-eight .rs-footer .footer-bottom {
-  border-color: rgba(28, 57, 136, 0.15);
+  border-color: white;
 }
 body.home-eight .rs-footer .footer-bottom .copyright p {
-  color: #333;
+  color: white;
 }
 body.home-eight .rs-footer .footer-bottom .footer-social li a {
-  background: #1c3988;
+  background: white;
 }
 body.home-eight .rs-footer .footer-bottom .footer-social li a:hover {
   background: #1c3988;
@@ -5785,7 +5785,7 @@ body .modal-backdrop {
   animation: fadeInUp 1.8s ease-in-out;
 }
 .rs-slider.slider8 .slider {
-  padding: 245px 0 240px;
+  padding: 150px 0 150px;
 }
 .rs-slider.slider8 .slider.slide1 {
   background-repeat: no-repeat;
@@ -8856,7 +8856,7 @@ body .modal-backdrop {
   max-width: unset;
 }
 .rs-whychooseus.style4 .content-part .text-part {
-  padding-left: 35px;
+  padding-left: 0;
 }
 .rs-whychooseus.style4 .content-part .text-part .title {
   margin-bottom: 10px;
@@ -9184,9 +9184,26 @@ body .modal-backdrop {
   color: #ffffff;
   margin-bottom: 0;
 }
-.rs-whychooseus ul {
-    list-style: unset !important;
+
+.rs-whychooseus ul li:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    content: "\f05d";
+    font-family: 'FontAwesome';
+    color: #1c3988;
+    font-size: 22px;
+
 }
+.rs-whychooseus ul li {
+    position: relative;
+    padding-left: 30px;
+    line-height: 2em;
+    font-size: 16px;
+    /*margin-bottom: 15px;*/
+}
+
 /*---------------------------------------
     12. Featured Section CSS
 ---------------------------------------*/
@@ -16007,7 +16024,8 @@ body .modal-backdrop {
     38. Footer CSS
 ---------------------------------------*/
 .rs-footer {
-  background: #101010;
+  background: #1c3988;
+    color: white
 }
 .rs-footer .footer-newsletter {
   padding: 80px 0 70px;
@@ -16096,7 +16114,7 @@ body .modal-backdrop {
   margin-bottom: 30px;
 }
 .rs-footer .footer-content .about-widget .logo-part a img {
-  height: 38px;
+  height: 90px;
   width: auto;
 }
 .rs-footer .footer-content .about-widget .desc {
@@ -16144,7 +16162,7 @@ body .modal-backdrop {
   height: 30px;
   line-height: 30px;
   background: #106eea;
-  color: #ffffff;
+  color: #1c3988;
   text-align: center;
 }
 .rs-footer .footer-bottom .footer-social li a:hover {

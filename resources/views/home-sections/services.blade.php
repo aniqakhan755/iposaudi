@@ -3,7 +3,7 @@
     <div class="container">
         <div class="sec-title text-center mb-119 md-mb-80 sm-mb-42">
             <div class="sub-title gray-color">What we do</div>
-            <h2 class="title mb-0">View Reobiz HR Solutions <span class="d-block blue-color">Best Services</span></h2>
+            <h2 class="title mb-0">{{$heading->service_heading}}<span class="d-block blue-color">{{$heading->service_subheading}}</span></h2>
         </div>
         <div class="row gutter-16">
             @foreach($service_configurations as $service_configuration)

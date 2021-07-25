@@ -11,7 +11,7 @@
                     </div>
                     <div class="slider-bottom mt-40">
                         <ul>
-                            <li><a href="#" class="readon">Contact us</a></li>
+{{--                            <li><a href="#" class="readon">Contact us</a></li>--}}
 
                         </ul>
                     </div>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="slider-bottom mt-40">
                         <ul>
-                            <li><a href="#" class="readon">Contact us</a></li>
+{{--                            <li><a href="#" class="readon">Contact us</a></li>--}}
 
                         </ul>
                     </div>

@@ -17,9 +17,29 @@
                         </h6>
 
                             <div class="element-content">
+
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="element-box">
+                                            <form action="{{route('services-heading.post')}}" method="post">
+                                                @csrf
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Service Heading <span class="color-red">*</span></label>
+                                                        <input class="form-control" placeholder="Service Heading" required type="text" name="service_heading" value="{{$heading->service_heading}}">
+                                                    </div>
+                                                </div>
+                                            </div>   <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Service Subheading <span class="color-red">*</span></label>
+                                                        <input class="form-control" placeholder="Service Subheading" required type="text" name="service_subheading" value="{{$heading->service_subheading}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <button class="btn btn-primary" type="submit"> Submit</button>
+                                            </form>
                                             @foreach($service_configurations as $index => $service_configuration)
                                                 <form action="{{route('services.post')}}" method="post">
                                                     @csrf

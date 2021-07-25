@@ -7,5 +7,5 @@
     @include('home-sections.about-us')
     @include('home-sections.services')
     @include('home-sections.blogs')
-    @include('home-sections.contact-us')
+{{--    @include('home-sections.contact-us')--}}
 @endsection

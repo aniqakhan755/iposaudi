@@ -79,14 +79,14 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <div class="form-group">
-                                                            <label for="">Upload Footer Background</label>
-                                                            <input type="file" class="form-control" id="myFile" name="footer_bg" accept="image/png, image/gif, image/jpeg">
-                                                        </div>
-                                                    </div>
-                                                </div>
+{{--                                                <div class="row">--}}
+{{--                                                    <div class="col-sm-12">--}}
+{{--                                                        <div class="form-group">--}}
+{{--                                                            <label for="">Upload Footer Background</label>--}}
+{{--                                                            <input type="file" class="form-control" id="myFile" name="footer_bg" accept="image/png, image/gif, image/jpeg">--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
                                                 <div class="row">
                                                     <div class="col-sm-12">
                                                         <div class="form-group">

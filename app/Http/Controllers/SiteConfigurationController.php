@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\AboutConfiguration;
 use App\Models\ChooseUsConfiguration;
 use App\Models\FooterConfiguration;
+use App\Models\Heading;
 use App\Models\ServiceConfiguration;
 use App\Models\SliderConfiguration;
 use Illuminate\Http\Request;
@@ -50,8 +51,9 @@ class SiteConfigurationController extends Controller
     public function manageServices()
     {
         $service_configurations = (new ServiceConfiguration)->all();
+        $heading = (new Heading)->where('id', 1)->first();
 
-        return view('manage-services', compact('service_configurations'));
+        return view('manage-services', compact('service_configurations','heading'));
     }
     public function manageFooter()
     {
@@ -164,12 +166,29 @@ class SiteConfigurationController extends Controller
 
 
         ]);
+
         return back()->withSuccess('Services Data Successfully Updated!');
+
+
+    }
+    public function postServicesHeading(Request $request)
+    {
+
+        $heading = (new Heading)->where('id', 1)->first();
+
+        $heading->update([
+            'service_heading' => $request->service_heading,
+            'service_subheading' => $request->service_subheading,
+
+
+        ]);
+        return back()->withSuccess('Services Heading Successfully Updated!');
 
 
     }
     public function postFooter(Request $request)
     {
+
 
         $footer_configuration = (new FooterConfiguration)->where('id',1)->first();
         $validator = Validator::make($request->all(), [
@@ -189,8 +208,7 @@ class SiteConfigurationController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
         }
-        $about_configuration = (new AboutConfiguration)->where('id', 1)->first();
-        $filename_1 = public_path('assets/images/footer/') . $about_configuration->footer_bg;
+        $filename_1 = public_path('assets/images/footer/') . $footer_configuration->footer_bg;
 
         $filename_new_1 = '';
         if ($request->has('footer_bg')) {
@@ -211,7 +229,7 @@ class SiteConfigurationController extends Controller
             'twitter_url' => $request->twitter_url,
             'instagram_url' => $request->instagram_url,
             'linked_in_url' => $request->linked_in_url,
-            'footer_bg' => ($request->has('footer_bg')) ? ($filename_new_1) : ($about_configuration->footer_bg),
+            'footer_bg' => ($request->has('footer_bg')) ? ($filename_new_1) : ($footer_configuration->footer_bg),
 
 
         ]);
