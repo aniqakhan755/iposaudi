@@ -3,7 +3,7 @@
     <div class="container">
         <div class="footer-content pt-80 pb-79 md-pb-64">
             <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 footer-widget md-mb-39">
+                <div class="col-lg-6 col-md-12 col-sm-12 footer-widget footer-about md-mb-39">
                     <div class="about-widget pr-15">
                         <div class="logo-part">
                             <a href="{{route('welcome')}}"><img  src="{{asset('assets/images/logo-white.png')}}" alt="Footer Logo"></a>
@@ -14,7 +14,7 @@
 {{--                        </div>--}}
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 md-mb-32 footer-widget">
+                <div class="col-lg-6 col-md-12 col-sm-12 md-mb-32 footer-widget footer-contact">
                     <h4 class="widget-title">Contact Info</h4>
                     <ul class="address-widget pr-40">
                         <li>

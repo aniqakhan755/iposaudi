@@ -20,22 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbddb829-861a-4aa2-878b-2bcd5d9378d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/images/logo-white.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteConfigurationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteConfigurationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultant-project.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/SiteConfigurationSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SiteConfigurationSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/footer/footer_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/footer/footer_bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about-us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/choose-more.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/choose-more.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home-sections/services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home-sections/services.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home-sections/sliders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home-sections/sliders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/manage-footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/manage-footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/manage-services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/manage-services.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/website-template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/website-template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/manage-choose-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/manage-choose-us.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/manage-sliders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/manage-sliders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,6 +193,8 @@
       <workItem from="1626552817216" duration="7443000" />
       <workItem from="1626596955586" duration="31670000" />
       <workItem from="1627129962095" duration="30568000" />
+      <workItem from="1627290430151" duration="14559000" />
+      <workItem from="1627476625393" duration="5265000" />
     </task>
     <servers />
   </component>
@@ -223,10 +222,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="561" y="190" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1626700371632" />
-    <state x="666" y="313" width="587" height="534" key="find.popup" timestamp="1627148613107">
+    <state x="666" y="313" width="587" height="534" key="find.popup" timestamp="1627477843583">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="666" y="313" width="587" height="534" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1627148613107" />
+    <state x="666" y="313" width="587" height="534" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1627477843583" />
     <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1627148330072">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

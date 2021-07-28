@@ -36,6 +36,7 @@
                                                     <div class="form-group">
                                                         <label for="">Upload Choose Us Image</label>
                                                         <input type="file" class="form-control" id="myFile" name="image_choose_us" accept="image/png, image/gif, image/jpeg">
+                                                        <p class="color-red">Image Size: 768 x 729</p>
                                                     </div>
                                                 </div>
                                             </div>

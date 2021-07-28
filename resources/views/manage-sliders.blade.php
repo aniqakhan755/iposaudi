@@ -42,6 +42,7 @@
                                                     <div class="form-group">
                                                         <label for="">Upload Slider Image</label>
                                                         <input type="file" class="form-control" id="myFile" name="image_slider1" accept="image/png, image/gif, image/jpeg">
+                                                        <p class="color-red">Image Size: 1920 x 850</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -66,6 +67,7 @@
                                                     <div class="form-group">
                                                         <label for="">Upload Slider Image</label>
                                                         <input type="file" class="form-control" id="myFile" name="image_slider2" accept="image/png, image/gif, image/jpeg">
+                                                        <p class="color-red">Image Size: 1920 x 850</p>
                                                     </div>
                                                 </div>
                                             </div>

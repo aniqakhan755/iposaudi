@@ -90,6 +90,7 @@
 <script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
 <!-- imagesloaded.pkgd.min js -->
 <script src="{{asset('assets/js/imagesloaded.pkgd.min.js')}}"></script>
+<script src="{{asset('assets/js/eocjs-newsticker.js')}}"></script>
 <!-- wow js -->
 <script src="{{asset('assets/js/wow.min.js')}}"></script>
 <!-- aos js -->

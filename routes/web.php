@@ -1,11 +1,5 @@
 <?php
 
-use App\Models\AboutConfiguration;
-use App\Models\ChooseUsConfiguration;
-use App\Models\FooterConfiguration;
-use App\Models\Heading;
-use App\Models\ServiceConfiguration;
-use App\Models\SliderConfiguration;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,17 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    $slider_configuration = (new SliderConfiguration)->where('id',1)->first();
-    $about_configuration = (new AboutConfiguration)->where('id',1)->first();
-    $service_configurations = (new ServiceConfiguration)->all();
-    $footer_configuration = (new FooterConfiguration)->where('id',1)->first();
-    $choose_configuration = (new ChooseUsConfiguration)->where('id',1)->first();
-    $heading = (new Heading)->where('id',1)->first();
-
-    return view('welcome',compact(['slider_configuration','about_configuration','service_configurations','footer_configuration','choose_configuration','heading']));
-})->name('welcome');
+Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('welcome');
 
 Auth::routes();
 

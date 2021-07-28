@@ -1497,31 +1497,31 @@ ul.listing-style.regular2 li:before {
   font-size: 24px;
   top: -2px;
 }
-ul.listing-style2 li {
+.choose-more-style ul li {
   position: relative;
   padding-left: 30px;
   line-height: 2em;
   font-size: 16px;
   margin-bottom: 15px;
 }
-ul.listing-style2 li:before {
+.choose-more-style ul li:before {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
   content: "\f05d";
   font-family: 'FontAwesome';
-  color: #106eea;
+  color: #1c3988;
   font-size: 22px;
 }
-ul.listing-style2 li:last-child {
+.choose-more-style ul li:last-child {
   margin-bottom: 0 !important;
 }
-ul.listing-style2.modify li {
+.choose-more-style ul.modify li {
   padding-left: 25px;
   margin-bottom: 8px;
 }
-ul.listing-style2.modify li:before {
+.choose-more-style ul.modify li:before {
   content: "\f105";
 }
 ul.page-nav-vertical li {
@@ -7463,15 +7463,15 @@ body .modal-backdrop {
   border-radius: 10px;
 }
 .rs-about.inner .image-part .author-info {
-  background: #106eea;
-  text-align: center;
-  padding: 30px 30px;
-  width: 270px;
-  border-radius: 8px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -64px;
+    background: #1c3988;
+    text-align: center;
+    padding: 15px 15px;
+    width: 270px;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -64px;
 }
 .rs-about.inner .image-part .author-info .name {
   color: #ffffff;
@@ -16954,3 +16954,49 @@ body .modal-backdrop {
     background: #1c3988;
   }
 }
+
+.eocjs-newsticker {
+    padding: 14px 0;
+    background-color: #F1F5FF;
+}
+
+.eocjs-newsticker .eocjs-newsticker-container {
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+}
+
+.eocjs-newsticker .eocjs-newsticker-one,
+.eocjs-newsticker .eocjs-newsticker-two {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.eocjs-newsticker-loader {
+    position: absolute;
+    left: calc(50% - 10px);
+    width: 16px;
+    height: 16px;
+    display: block;
+    border: 2px solid #555555;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: eocjs-newsticker-spin .75s linear infinite;
+}
+
+@keyframes eocjs-newsticker-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.color-red {
+   color: #c92626;
+}
+.color-green {
+    color: green;
+}
+

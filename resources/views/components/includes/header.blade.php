@@ -2,32 +2,44 @@
 <div class="full-width-header header-style4">
     <!-- Toolbar Start -->
     <div class="toolbar-area hidden-md">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="toolbar-contact">
-                        <ul>
-                            <li><i class="flaticon-email"></i><a
-                                    href="mailto:{{$footer_configuration->email}}">{{$footer_configuration->email}}</a>
-                            </li>
+        {{--        <div class="container">--}}
+        <div class="row">
+            {{--                <div class="col-xl-2 col-lg-3">--}}
+            {{--                    <div class="toolbar-contact">--}}
+            {{--                        <ul>--}}
+            {{--                            <li><i class="flaticon-email"></i><a--}}
+            {{--                                    href="mailto:{{$footer_configuration->email}}">{{$footer_configuration->email}}</a>--}}
+            {{--                            </li>--}}
 
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="toolbar-sl-share">
-                        <ul>
-                            <li><a href="{{$footer_configuration->facebook_url}}"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="{{$footer_configuration->twitter_url}}"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="{{$footer_configuration->instagram_url}}"><i class="fa fa-instagram"></i></a>
-                            </li>
-                            <li><a href="{{$footer_configuration->linked_in_url}}"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
+            {{--                        </ul>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            <div class="col-12">
+                <div class="toolbar-contact">
+                    <div id="example-1">
+                        @foreach($current_stocks as $stock)
+                            <strong class="ml-1">{{$stock->name}}</strong> <span>{{$stock->price}}</span><span
+                                class=" @if($stock->difference < 0)color-red @else color-green @endif mr-1"> {{$stock->difference}} ({{$stock->percentage}}%)</span>
+                        @endforeach
                     </div>
                 </div>
             </div>
+            {{--                <div class="col-xl-2 col-lg-3">--}}
+            {{--                    <div class="toolbar-sl-share">--}}
+            {{--                        <ul>--}}
+            {{--                            <li><a href="{{$footer_configuration->facebook_url}}"><i class="fa fa-facebook"></i></a>--}}
+            {{--                            </li>--}}
+            {{--                            <li><a href="{{$footer_configuration->twitter_url}}"><i class="fa fa-twitter"></i></a></li>--}}
+            {{--                            <li><a href="{{$footer_configuration->instagram_url}}"><i class="fa fa-instagram"></i></a>--}}
+            {{--                            </li>--}}
+            {{--                            <li><a href="{{$footer_configuration->linked_in_url}}"><i class="fa fa-linkedin"></i></a>--}}
+            {{--                            </li>--}}
+            {{--                        </ul>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+
+
+            {{--            </div>--}}
         </div>
     </div>
     <!-- Toolbar End -->
@@ -55,7 +67,7 @@
                                         <li class="active-menu"><a href="#rs-header">Home</a></li>
                                         <li><a href="#rs-about">About</a></li>
                                         <li><a href="#rs-services">Services</a></li>
-                                        <li><a href="#rs-blog">Blog</a></li>
+                                        <li><a href="#rs-blog">Latest</a></li>
                                         <li><a href="#rs-contact">Contact</a></li>
                                     </ul> <!-- //.nav-menu -->
                                 </nav>
