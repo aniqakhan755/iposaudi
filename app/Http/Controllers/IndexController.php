@@ -48,8 +48,9 @@ class IndexController extends Controller
 
             $apiResult = json_decode($json, true);
 
+
             foreach ($apiResult['data'] as $index => $value) {
-                $difference = round($apiResult['data'][$index]['open'] - $apiResult['data'][$index]['close'],2);
+                $difference = round($apiResult['data'][$index]['close'] - $apiResult['data'][$index]['open'],2);
                 Stock::create([
                     'symbol' => $apiResult['data'][$index]['symbol'],
                     'name' => $symbols[$apiResult['data'][$index]['symbol']],
@@ -59,7 +60,7 @@ class IndexController extends Controller
                     'high' => $apiResult['data'][$index]['high'],
                     'low' => $apiResult['data'][$index]['low'],
                     'difference' => $difference,
-                    'percentage' => round(($difference/$apiResult['data'][$index]['open'])/100),
+                    'percentage' => round((100 * ($apiResult['data'][$index]['close'] - $apiResult['data'][$index]['open'])) / $apiResult['data'][$index]['open'],2),
                     'date' => Carbon::yesterday()->toDateString()
                 ]);
             }

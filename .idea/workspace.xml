@@ -21,19 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dbddb829-861a-4aa2-878b-2bcd5d9378d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/choose-more.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/choose-more.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/website-template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/website-template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/manage-choose-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/manage-choose-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/manage-sliders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/manage-sliders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +184,8 @@
       <workItem from="1626596955586" duration="31670000" />
       <workItem from="1627129962095" duration="30568000" />
       <workItem from="1627290430151" duration="14559000" />
-      <workItem from="1627476625393" duration="5265000" />
+      <workItem from="1627476625393" duration="7487000" />
+      <workItem from="1627493122157" duration="1271000" />
     </task>
     <servers />
   </component>

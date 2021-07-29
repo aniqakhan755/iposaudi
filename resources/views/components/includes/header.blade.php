@@ -1,7 +1,7 @@
 <!--Full width header Start-->
 <div class="full-width-header header-style4">
     <!-- Toolbar Start -->
-    <div class="toolbar-area hidden-md">
+    <div class="toolbar-area">
         {{--        <div class="container">--}}
         <div class="row">
             {{--                <div class="col-xl-2 col-lg-3">--}}
@@ -19,7 +19,7 @@
                     <div id="example-1">
                         @foreach($current_stocks as $stock)
                             <strong class="ml-1">{{$stock->name}}</strong> <span>{{$stock->price}}</span><span
-                                class=" @if($stock->difference < 0)color-red @else color-green @endif mr-1"> {{$stock->difference}} ({{$stock->percentage}}%)</span>
+                                class=" @if($stock->difference < 0)color-red @else color-green @endif mr-1"> {{$stock->difference}} ({{$stock->percentage}}%)</span>|
                         @endforeach
                     </div>
                 </div>
