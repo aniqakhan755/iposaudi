@@ -112,6 +112,7 @@
 <script src="{{asset('assets/js/contact.form.js')}}"></script>
 <!-- main js -->
 <script src="{{asset('assets/js/main.js')}}"></script>
+@include('components.includes.contact-modal')
 @yield('scripts')
 </body>
 </html>

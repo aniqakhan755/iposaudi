@@ -40,7 +40,7 @@
             changeHash: false,
             easing: 'swing',
             filter: '',
-            scrollOffset: 89,
+            scrollOffset: 80,
             scrollSpeed: 750,
             scrollThreshold: 0.5,
             begin: false,

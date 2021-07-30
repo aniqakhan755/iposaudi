@@ -13,7 +13,7 @@
                             <img src="{{asset('assets/images/services/style9/'.$service_configuration->service_icon)}}" alt="">
                         </div>
                         <h5 class="title">{{$service_configuration->service_title}}</h5>
-                        <div class="desc">{{$service_configuration->service_desc}}</div>
+{{--                        <div class="desc">{{$service_configuration->service_desc}}</div>--}}
                     </div>
                 </div>
             @endforeach

@@ -6,11 +6,13 @@ use App\Models\AboutConfiguration;
 use App\Models\ChooseUsConfiguration;
 use App\Models\FooterConfiguration;
 use App\Models\Heading;
+use App\Models\Message;
 use App\Models\ServiceConfiguration;
 use App\Models\SliderConfiguration;
 use App\Models\Stock;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class IndexController extends Controller
 {
@@ -50,7 +52,7 @@ class IndexController extends Controller
 
 
             foreach ($apiResult['data'] as $index => $value) {
-                $difference = round($apiResult['data'][$index]['close'] - $apiResult['data'][$index]['open'],2);
+                $difference = round($apiResult['data'][$index]['close'] - $apiResult['data'][$index]['open'], 2);
                 Stock::create([
                     'symbol' => $apiResult['data'][$index]['symbol'],
                     'name' => $symbols[$apiResult['data'][$index]['symbol']],
@@ -60,7 +62,7 @@ class IndexController extends Controller
                     'high' => $apiResult['data'][$index]['high'],
                     'low' => $apiResult['data'][$index]['low'],
                     'difference' => $difference,
-                    'percentage' => round((100 * ($apiResult['data'][$index]['close'] - $apiResult['data'][$index]['open'])) / $apiResult['data'][$index]['open'],2),
+                    'percentage' => round((100 * ($apiResult['data'][$index]['close'] - $apiResult['data'][$index]['open'])) / $apiResult['data'][$index]['open'], 2),
                     'date' => Carbon::yesterday()->toDateString()
                 ]);
             }
@@ -68,7 +70,40 @@ class IndexController extends Controller
         }
         $current_stocks = (new Stock)->where('date', Carbon::yesterday()->toDateString())->get();
 
-        return view('welcome', compact(['slider_configuration', 'about_configuration', 'service_configurations', 'footer_configuration', 'choose_configuration', 'heading','current_stocks']));
+        return view('welcome', compact(['slider_configuration', 'about_configuration', 'service_configurations', 'footer_configuration', 'choose_configuration', 'heading', 'current_stocks']));
+
+
+    }
+
+    public function postContact(Request $request)
+    {
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required'
+
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
+        }
+
+
+        Message::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+
+
+        ]);
+        return back()->withSuccess('Message Successfully Sent!');
+    }
+
+    public function getMessages()
+    {
+        $messages = Message::all();
+        return view('manage-messages', compact('messages'));
 
 
     }

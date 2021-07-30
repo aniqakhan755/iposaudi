@@ -17,9 +17,9 @@
             <div class="col-12">
                 <div class="toolbar-contact">
                     <div id="example-1">
-                        @foreach($current_stocks as $stock)
-                            <strong class="ml-1">{{$stock->name}}</strong> <span>{{$stock->price}}</span><span
-                                class=" @if($stock->difference < 0)color-red @else color-green @endif mr-1"> {{$stock->difference}} ({{$stock->percentage}}%)</span>|
+                        @foreach($current_stocks as $index => $stock)
+                            @if($index != 0)|@endif<strong class="ml-1">{{$stock->name}}</strong> <span>{{$stock->price}}</span><span
+                                class=" @if($stock->difference < 0)color-red @else color-green @endif mr-1"> {{$stock->difference}} ({{$stock->percentage}}%)</span>
                         @endforeach
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                                         <li><a href="#rs-about">About</a></li>
                                         <li><a href="#rs-services">Services</a></li>
                                         <li><a href="#rs-blog">Latest</a></li>
-                                        <li><a href="#rs-contact">Contact</a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></li>
                                     </ul> <!-- //.nav-menu -->
                                 </nav>
                             </div> <!-- //.main-menu -->

@@ -9,7 +9,7 @@
                         <img src="{{asset('assets/images/whychooseus/'.$choose_configuration->image_choose_us)}}" alt="">
                         <div class="author-info">
                             <h3 class="name">Faisal Siddique</h3>
-                            <span class="designation">CEO & Founder</span>
+                            <span class="designation">CFO & Founder</span>
                         </div>
                     </div>
                 </div>

@@ -35,6 +35,7 @@ class SiteConfigurationController extends Controller
         $slider_configuration = (new SliderConfiguration)->where('id', 1)->first();
         return view('manage-sliders', compact('slider_configuration'));
     }
+
     public function manageChooseUs()
     {
         $choose_configuration = (new ChooseUsConfiguration)->where('id', 1)->first();
@@ -53,8 +54,9 @@ class SiteConfigurationController extends Controller
         $service_configurations = (new ServiceConfiguration)->all();
         $heading = (new Heading)->where('id', 1)->first();
 
-        return view('manage-services', compact('service_configurations','heading'));
+        return view('manage-services', compact('service_configurations', 'heading'));
     }
+
     public function manageFooter()
     {
         $footer_configuration = (new FooterConfiguration)->where('id', 1)->first();
@@ -69,6 +71,10 @@ class SiteConfigurationController extends Controller
 
             'image_slider1' => 'nullable|image|mimes:jpeg,png,jpg',
             'image_slider2' => 'nullable|image|mimes:jpeg,png,jpg',
+            'sl_title_1' => 'required',
+            'sl_title_2' => 'required',
+            'sl_subtitle_2' => 'required',
+            'sl_subtitle_1' => 'required',
         ]);
 
 
@@ -158,11 +164,19 @@ class SiteConfigurationController extends Controller
 
     public function postServices(Request $request)
     {
-        $service_configuration = (new ServiceConfiguration)->where('id',$request->service_id)->first();
+        $validator = Validator::make($request->all(), [
+            'service_title' => 'required'
+
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
+        }
+        $service_configuration = (new ServiceConfiguration)->where('id', $request->service_id)->first();
 
         $service_configuration->update([
             'service_title' => $request->service_title,
-            'service_desc' => $request->service_desc,
+            'service_desc' => 'null',
 
 
         ]);
@@ -171,8 +185,18 @@ class SiteConfigurationController extends Controller
 
 
     }
+
     public function postServicesHeading(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'service_heading' => 'required',
+            'service_subheading' => 'required'
+
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
+        }
 
         $heading = (new Heading)->where('id', 1)->first();
 
@@ -186,11 +210,12 @@ class SiteConfigurationController extends Controller
 
 
     }
+
     public function postFooter(Request $request)
     {
 
 
-        $footer_configuration = (new FooterConfiguration)->where('id',1)->first();
+        $footer_configuration = (new FooterConfiguration)->where('id', 1)->first();
         $validator = Validator::make($request->all(), [
 
             'footer_bg' => 'nullable|image|mimes:jpeg,png,jpg',
@@ -233,14 +258,15 @@ class SiteConfigurationController extends Controller
 
 
         ]);
-            return back()->withSuccess('Footer Data Successfully Updated!');
+        return back()->withSuccess('Footer Data Successfully Updated!');
 
 
     }
+
     public function postChooseUs(Request $request)
     {
 
-        $choose_configuration = (new ChooseUsConfiguration)->where('id',1)->first();
+        $choose_configuration = (new ChooseUsConfiguration)->where('id', 1)->first();
         $validator = Validator::make($request->all(), [
             'image_choose_us' => 'nullable|image|mimes:jpeg,png,jpg',
             'choose_us_title' => 'required',
@@ -254,8 +280,8 @@ class SiteConfigurationController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
         }
-        $about_configuration = (new AboutConfiguration)->where('id', 1)->first();
-        $filename_1 = public_path('assets/images/whychooseus/') . $about_configuration->image_choose_us;
+        $choose_configuration = (new ChooseUsConfiguration)->where('id', 1)->first();
+        $filename_1 = public_path('assets/images/whychooseus/') . $choose_configuration->image_choose_us;
 
         $filename_new_1 = '';
         if ($request->has('image_choose_us')) {
@@ -269,11 +295,11 @@ class SiteConfigurationController extends Controller
 
         $choose_configuration->update([
             'choose_us_title' => $request->choose_us_title,
-            'heading_1' =>  $request->heading_1,
-            'heading_2' =>  $request->heading_2,
-            'heading1_desc' =>  $request->heading1_desc,
-            'heading2_desc' =>  $request->heading2_desc,
-            'image_choose_us' => ($request->has('image_choose_us')) ? ($filename_new_1) : ($about_configuration->image_choose_us),
+            'heading_1' => $request->heading_1,
+            'heading_2' => $request->heading_2,
+            'heading1_desc' => $request->heading1_desc,
+            'heading2_desc' => $request->heading2_desc,
+            'image_choose_us' => ($request->has('image_choose_us')) ? ($filename_new_1) : ($choose_configuration->image_choose_us),
         ]);
         return back()->withSuccess('Choose Us Data Successfully Updated!');
 

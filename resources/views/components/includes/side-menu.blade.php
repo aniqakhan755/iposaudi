@@ -63,6 +63,13 @@
                 </div>
                 <span>Footer</span></a>
         </li>
+        <li>
+            <a href="{{route('manage.messages')}}">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-layout"></div>
+                </div>
+                <span>Messages</span></a>
+        </li>
 
 
 

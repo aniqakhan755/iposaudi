@@ -1,4 +1,5 @@
 <!-- About Section Start -->
+
 <div id="rs-about" class="rs-about style3 pt-100 lg-pt-90 md-pt-80 pb-92 md-pb-72 sm-pb-80">
     <div class="container">
         <div class="row y-middle">
@@ -15,7 +16,7 @@
                     {{--                                <p class="desc2"><?php echo($about_configuration->about_us_desc) ?></p>--}}
                     <div class="desc"><?php echo($out) ?></div>
                     <div class="btn-part mt-45">
-                        <a class="readon blue-btn" href="#">Discover More</a>
+                        <a class="readon blue-btn" href="{{route('download.profile')}}">Download Profile</a>
                     </div>
                 </div>
             </div>

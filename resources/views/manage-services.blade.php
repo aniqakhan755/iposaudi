@@ -55,15 +55,15 @@
                                                                        type="text" name="service_title">
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-12">
-                                                            <div class="form-group">
-                                                                <label for="">Service Description <span
-                                                                        class="color-red">*</span></label>
-                                                                <textarea class="form-control" placeholder="Description"
-                                                                          required type="text" rows="4"
-                                                                          name="service_desc">{{$service_configuration->service_desc}}</textarea>
-                                                            </div>
-                                                        </div>
+{{--                                                        <div class="col-sm-12">--}}
+{{--                                                            <div class="form-group">--}}
+{{--                                                                <label for="">Service Description <span--}}
+{{--                                                                        class="color-red">*</span></label>--}}
+{{--                                                                <textarea class="form-control" placeholder="Description"--}}
+{{--                                                                          required type="text" rows="4"--}}
+{{--                                                                          name="service_desc">{{$service_configuration->service_desc}}</textarea>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
                                                     </div>
                                                 </fieldset>
                                                     <button class="btn btn-primary" type="submit"> Submit</button>
