@@ -1,4 +1,7 @@
 @extends('layouts.website-template')
+@section('header')
+    @include('components.includes.header')
+    @endsection
 @section('main-content')
     @include('home-sections.sliders')
     @include('home-sections.partners')

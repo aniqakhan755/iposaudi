@@ -1,9 +1,9 @@
 <!-- Footer Start -->
 <footer id="rs-footer" class="rs-footer">
     <div class="container">
-        <div class="footer-content pt-80 pb-79 md-pb-64">
+        <div class="footer-content pt-40">
             <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 footer-widget footer-about md-mb-39">
+                <div class="col-lg-6 col-md-12 col-sm-12 footer-widget footer-about">
                     <div class="about-widget pr-15">
                         <div class="logo-part">
                             <a href="{{route('welcome')}}"><img  src="{{asset('assets/images/logo-white.png')}}" alt="Footer Logo"></a>

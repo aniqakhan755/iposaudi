@@ -55,7 +55,7 @@
 </div>
 <!--End preloader here -->
 
-@include('components.includes.header')
+@yield('header')
 
 <!-- Main content Start -->
 <div class="main-content">

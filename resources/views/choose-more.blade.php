@@ -1,4 +1,7 @@
 @extends('layouts.website-template')
+@section('header')
+    @include('components.includes.page-header')
+@endsection
 @section('main-content')
     <!-- About Section Start -->
     <div class="rs-about inner pt-100 lg-pt-92 md-pt-80 pb-100 md-pb-80">

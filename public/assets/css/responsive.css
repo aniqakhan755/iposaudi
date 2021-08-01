@@ -45,7 +45,7 @@
         padding-right:100px;
     }
     .footer-contact{
-        padding-left:100px;
+        padding-left:200px;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -2783,6 +2783,9 @@
         padding: 0;
         margin: 0;
     }
+    .align-about-text{
+        text-align:center;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2802,6 +2805,7 @@
     .rs-about.style10 .sec-title4 .title {
         font-size: 23px;
         line-height: 37px;
+        text-align: center;
     }
     .rs-services.style19 .services-item .services-wrap .shape-part {
         display: none;
@@ -2872,13 +2876,13 @@
         display: none;
     }
     .rs-about.style10 .accordion .card .card-body {
-        padding: 17px 50px 40px 20px !important;
+        padding: 17px 20px 40px 20px !important;
         font-size: 13px;
     }
 
     .rs-about.style10 .accordion .card .card-header .card-link,
     .rs-about.style10 .accordion .card .card-header .card-link.collapsed.card-link {
-        font-size: 13px;
+        font-size: 16px;
     }
     .rs-slider.slider14 .slider .slider-content .sl-sub-title {
         line-height: 29px;

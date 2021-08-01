@@ -1,8 +1,8 @@
 <!-- About Section Start -->
 
-<div id="rs-about" class="rs-about style3 pt-100 lg-pt-90 md-pt-80 pb-92 md-pb-72 sm-pb-80">
+<div id="rs-about" class="rs-about style3 pt-100 lg-pt-90 md-pt-80 pb-92 md-pb-72 sm-pb-80 sm-pt-0">
     <div class="container">
-        <div class="row y-middle">
+        <div class="row y-middle align-about-text">
             <div class="col-lg-6 md-mb-30">
                 <div class="image-part">
                     <img src="{{asset('assets/images/about/'.$about_configuration->image_about)}}" alt="">

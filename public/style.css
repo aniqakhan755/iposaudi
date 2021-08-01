@@ -7372,8 +7372,12 @@ body .modal-backdrop {
     background: #f9f9f9;
     font-weight: 400;
     color: #363636;
-    padding: 17px 65px 40px 22px !important;
+    padding: 17px 22px 40px 22px !important;
     border: none;
+}
+.rs-about.style3 .y-middle{
+    max-height: 570px;
+
 }
 .rs-about.style10 .accordion .card .card-header .card-link {
     position: relative;
@@ -14770,10 +14774,10 @@ body .modal-backdrop {
     display: none;
 }
 .rs-blog.style1.modify2.green .blog-wrap .content-part .title a:hover {
-    color: #67c27c;
+    color: #1c3988;
 }
 .rs-blog.style1.modify2.green .blog-wrap .content-part .blog-meta .date i {
-    color: #67c27c;
+    color: #1c3988;
 }
 .rs-blog.style1.modify3 .blog-wrap .content-part a.categories {
     color: #f67d31;

@@ -1,5 +1,5 @@
 <!-- Services Section Start -->
-<div id="rs-services" class="rs-services style9 shape-bg2 sm-pt-72 sm-pb-72">
+<div id="rs-services" class="rs-services style9 shape-bg2 sm-pt-72">
     <div class="container">
         <div class="sec-title text-center mb-119 md-mb-80 sm-mb-42">
             <div class="sub-title gray-color">What we do</div>

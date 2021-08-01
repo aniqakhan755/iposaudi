@@ -7,6 +7,7 @@ use App\Models\ChooseUsConfiguration;
 use App\Models\FooterConfiguration;
 use App\Models\Heading;
 use App\Models\Message;
+use App\Models\News;
 use App\Models\ServiceConfiguration;
 use App\Models\SliderConfiguration;
 use App\Models\Stock;
@@ -34,6 +35,7 @@ class IndexController extends Controller
         ];
 
         $current_stock = (new Stock)->where('date', Carbon::yesterday()->toDateString())->get();
+        $current_news = (new News)->where('created_at','>=', Carbon::now()->subMinutes(30)->format('Y-m-d H:i:s'))->orderBy('id','desc')->take(10)->get();
 
         if ($current_stock->count() == 0) {
             $queryString = http_build_query([
@@ -68,9 +70,38 @@ class IndexController extends Controller
             }
 
         }
-        $current_stocks = (new Stock)->where('date', Carbon::yesterday()->toDateString())->get();
+        if ($current_news->count() == 0) {
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, 'https://gnews.io/api/v4/top-headlines?token=0fe5a9586fbe2b21da89b1c59ec314a6&topic=business&lang=en&country=sa');
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-        return view('welcome', compact(['slider_configuration', 'about_configuration', 'service_configurations', 'footer_configuration', 'choose_configuration', 'heading', 'current_stocks']));
+            $data = curl_exec($ch);
+            curl_close($ch);
+            $apiResult = json_decode($data, true);
+
+
+            foreach ($apiResult["articles"] as $article) {
+
+                News::create([
+                    'title' => $article['title'],
+                    'description' => $article['description'],
+                    'content' => $article['content'],
+                    'url' => $article['url'],
+                    'image' => $article['image'],
+                    'source_name' => $article['source']['name'],
+                    'source_url' => $article['source']['url'],
+                    'pulished_date' => date('Y-m-d', strtotime($article['publishedAt']))
+
+                ]);
+            }
+
+
+        }
+        $current_stocks = (new Stock)->where('date', Carbon::yesterday()->toDateString())->get();
+        $current_news = (new News)::orderBy('id','DESC')->take(10)->get();
+
+        return view('welcome', compact(['slider_configuration', 'about_configuration', 'service_configurations', 'footer_configuration', 'choose_configuration', 'heading', 'current_stocks','current_news']));
 
 
     }
