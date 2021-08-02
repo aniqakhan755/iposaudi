@@ -2541,13 +2541,13 @@ body.home-eight .rs-footer .footer-content .address-widget li .desc a:hover {
     color: white;
 }
 body.home-eight .rs-footer .footer-content .footer-post .post-wrap .post-desc a {
-    color: #1c1b1b;
+    color: white;
 }
 body.home-eight .rs-footer .footer-content .footer-post .post-wrap .post-desc a:hover {
-    color: #1c3988;
+    color: white;
 }
 body.home-eight .rs-footer .footer-content .footer-post .post-wrap .post-desc .date-post {
-    color: #333;
+    color: #e0e0e0;
 }
 body.home-eight .rs-footer .footer-content .footer-post .post-wrap .post-desc .date-post i {
     color: #1c3988;

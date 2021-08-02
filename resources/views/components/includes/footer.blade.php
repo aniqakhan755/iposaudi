@@ -1,20 +1,21 @@
 <!-- Footer Start -->
 <footer id="rs-footer" class="rs-footer">
     <div class="container">
-        <div class="footer-content pt-40">
+        <div class="footer-content pt-40 pb-20">
             <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 footer-widget footer-about">
+                <div class="col-lg-4 col-md-12 col-sm-12 footer-widget footer-about">
                     <div class="about-widget pr-15">
                         <div class="logo-part">
-                            <a href="{{route('welcome')}}"><img  src="{{asset('assets/images/logo-white.png')}}" alt="Footer Logo"></a>
+                            <a href="{{route('welcome')}}"><img src="{{asset('assets/images/logo-white.png')}}"
+                                                                alt="Footer Logo"></a>
                         </div>
                         <p class="desc"><?php echo($footer_configuration->footer_description) ?></p>
-{{--                        <div class="btn-part">--}}
-{{--                            <a class="readon" href="#">Discover More</a>--}}
-{{--                        </div>--}}
+                        {{--                        <div class="btn-part">--}}
+                        {{--                            <a class="readon" href="#">Discover More</a>--}}
+                        {{--                        </div>--}}
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 md-mb-32 footer-widget footer-contact">
+                <div class="col-lg-4 col-md-12 col-sm-12 md-mb-32 footer-widget footer-contact">
                     <h4 class="widget-title">Contact Info</h4>
                     <ul class="address-widget pr-40">
                         <li>
@@ -33,13 +34,33 @@
                                 <a href="mailto:{{$footer_configuration->email}}">{{$footer_configuration->email}}</a>
                             </div>
                         </li>
-{{--                        <li>--}}
-{{--                            <i class="flaticon-clock"></i>--}}
-{{--                            <div class="desc">--}}
-{{--                                {{$footer_configuration->time}}--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
+                        {{--                        <li>--}}
+                        {{--                            <i class="flaticon-clock"></i>--}}
+                        {{--                            <div class="desc">--}}
+                        {{--                                {{$footer_configuration->time}}--}}
+                        {{--                            </div>--}}
+                        {{--                        </li>--}}
                     </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 footer-widget">
+                    <h4 class="widget-title">Latest Posts</h4>
+                    <div class="footer-post">
+                        @foreach($current_news as $index => $news)
+                            <?php $title = strlen($news->title) > 60 ? substr($news->title,0,60)."......" : $news->title; ?>
+                            @if($index < 3 )
+                            <div class="post-wrap mb-15">
+
+                                <div class="post-img">
+                                    <a href="{{$news->url}}"><img src="{{$news->image}}" alt="Footer Image"></a>
+                                </div>
+                                <div class="post-desc" style="display:block;">
+                                    <a href="{{$news->url}}">{{$title}}</a>
+                                </div>
+                            </div>
+                            @endif
+                        @endforeach
+
+                    </div>
                 </div>
             </div>
         </div>
