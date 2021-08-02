@@ -46,6 +46,15 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Upload Mobile Image</label>
+                                                        <input type="file" class="form-control" id="myFile" name="mobile_slider1" accept="image/png, image/gif, image/jpeg">
+                                                        <p class="color-red">Max Width: 600px</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </fieldset>
                                         <fieldset class="form-group">
                                             <legend><span>Slider 2</span></legend>
@@ -68,6 +77,15 @@
                                                         <label for="">Upload Slider Image</label>
                                                         <input type="file" class="form-control" id="myFile" name="image_slider2" accept="image/png, image/gif, image/jpeg">
                                                         <p class="color-red">Image Size: 1920 x 850</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Upload Mobile Image</label>
+                                                        <input type="file" class="form-control" id="myFile" name="mobile_slider2" accept="image/png, image/gif, image/jpeg">
+                                                        <p class="color-red">Max Width: 600px</p>
                                                     </div>
                                                 </div>
                                             </div>

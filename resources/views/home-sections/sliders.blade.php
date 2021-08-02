@@ -2,7 +2,7 @@
 <div id="rs-slider" class="rs-slider slider8">
     <div class="slider-carousel owl-carousel">
         <!-- Slide 1 -->
-        <div class="slider slide1" style="background-image: url('assets/images/slider/{{$slider_configuration->image_slider1}}');">
+        <div class="slider slide1">
             <div class="container">
                 <div class="content-part">
                     <div class="slider-des">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <!-- Slide 2 -->
-        <div class="slider slide2" style="background-image: url('assets/images/slider/{{$slider_configuration->image_slider2}}');">
+        <div class="slider slide2">
             <div class="container">
                 <div class="content-part">
                     <div class="slider-des">

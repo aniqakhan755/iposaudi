@@ -71,6 +71,8 @@ class SiteConfigurationController extends Controller
 
             'image_slider1' => 'nullable|image|mimes:jpeg,png,jpg',
             'image_slider2' => 'nullable|image|mimes:jpeg,png,jpg',
+            'mobile_slider2' => 'nullable|image|mimes:jpeg,png,jpg',
+            'mobile_slider1' => 'nullable|image|mimes:jpeg,png,jpg',
             'sl_title_1' => 'required',
             'sl_title_2' => 'required',
             'sl_subtitle_2' => 'required',
@@ -83,9 +85,13 @@ class SiteConfigurationController extends Controller
         }
         $filename_new_1 = '';
         $filename_new_2 = '';
+        $filename_new_3 = '';
+        $filename_new_4 = '';
         $slider_configuration = (new SliderConfiguration)->where('id', 1)->first();
         $filename_1 = public_path('assets/images/slider/') . $slider_configuration->image_slider1;
         $filename_2 = public_path('assets/images/slider/') . $slider_configuration->image_slider2;
+        $filename_3 = public_path('assets/images/slider/') . $slider_configuration->mobile_slider1;
+        $filename_4 = public_path('assets/images/slider/') . $slider_configuration->mobile_slider2;
         if ($request->has('image_slider1')) {
             if (File::exists($filename_1)) {
                 File::delete($filename_1);  // or unlink($filename);
@@ -106,6 +112,27 @@ class SiteConfigurationController extends Controller
             Image::make($request->file('image_slider2'))->save(public_path('assets/images/slider/' . $filename_new_2));
 
         }
+        if ($request->has('mobile_slider1')) {
+            if (File::exists($filename_3)) {
+                File::delete($filename_3);  // or unlink($filename);
+
+
+            }
+            $filename_new_3 = "mobile-1" . '.' . $request->file('mobile_slider1')->getClientOriginalExtension();
+            Image::make($request->file('mobile_slider1'))->save(public_path('assets/images/slider/' . $filename_new_3));
+
+        }
+        if ($request->has('mobile_slider2')) {
+            if (File::exists($filename_4)) {
+                File::delete($filename_4);  // or unlink($filename);
+
+
+            }
+            $filename_new_4 = "mobile-2" . '.' . $request->file('mobile_slider2')->getClientOriginalExtension();
+            Image::make($request->file('mobile_slider2'))->save(public_path('assets/images/slider/' . $filename_new_4));
+
+        }
+
 
 
         $slider_configuration->update([
@@ -115,6 +142,8 @@ class SiteConfigurationController extends Controller
             'sl_subtitle_2' => $request->sl_subtitle_2,
             'sl_title_1' => $request->sl_title_1,
             'sl_title_2' => $request->sl_title_2,
+            'mobile_slider1' => ($request->has('mobile_slider1')) ? ($filename_new_3) : ($slider_configuration->mobile_slider1),
+            'mobile_slider2' => ($request->has('mobile_slider2')) ? ($filename_new_4) : ($slider_configuration->mobile_slider2),
 
         ]);
         return back()->withSuccess('Sliders Data Successfully Updated!');

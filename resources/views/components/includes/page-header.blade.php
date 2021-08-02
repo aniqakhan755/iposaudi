@@ -65,9 +65,10 @@
                                 <nav class="rs-menu pr-65">
                                     <ul id="onepage-menu" class="nav-menu">
                                         <li><a href="{{route('welcome')}}">Home</a></li>
-                                        <li><a href="#rs-about">About</a></li>
-                                        <li><a href="#rs-services">Services</a></li>
-                                        <li><a href="#rs-blog">Latest</a></li>
+                                        <li><a href="{{route('about-us.read-more')}}">About</a></li>
+                                        <li><a href="{{route('services.read-more')}}">Services</a></li>
+                                        <li><a href="{{route('choose-us.read-more')}}">Choose Us</a></li>
+{{--                                        <li><a href="#rs-blog">Latest</a></li>--}}
                                         <li><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></li>
                                     </ul> <!-- //.nav-menu -->
                                 </nav>

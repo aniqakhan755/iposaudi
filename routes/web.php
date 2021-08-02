@@ -14,18 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('welcome');
 Route::get('/messages', [App\Http\Controllers\IndexController::class, 'getMessages'])->name('manage.messages');
-Route::get('/choose-us-read-more', [App\Http\Controllers\AboutController::class, 'chooseReadMore'])->name('choose-us.read-more');
+Route::get('/services', [App\Http\Controllers\AboutController::class, 'getServices'])->name('services.read-more');
+Route::get('/about-us', [App\Http\Controllers\AboutController::class, 'aboutReadMore'])->name('about-us.read-more');
+Route::get('/choose-us', [App\Http\Controllers\AboutController::class, 'chooseReadMore'])->name('choose-us.read-more');
 Route::get('/download-profile', [App\Http\Controllers\AboutController::class, 'downloadProfile'])->name('download.profile');
 Route::post('/iposaudi-contact', [App\Http\Controllers\IndexController::class, 'postContact'])->name('iposaudi.contact');
 
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/sliders', [App\Http\Controllers\SiteConfigurationController::class, 'manageSliders'])->name('manage.sliders');
-Route::get('/about', [App\Http\Controllers\SiteConfigurationController::class, 'manageAbout'])->name('manage.about');
-Route::get('/services', [App\Http\Controllers\SiteConfigurationController::class, 'manageServices'])->name('manage.services');
-Route::get('/choose-us', [App\Http\Controllers\SiteConfigurationController::class, 'manageChooseUs'])->name('manage.choose-us');
-Route::get('/footer', [App\Http\Controllers\SiteConfigurationController::class, 'manageFooter'])->name('manage.footer');
+Route::get('/manage-sliders', [App\Http\Controllers\SiteConfigurationController::class, 'manageSliders'])->name('manage.sliders');
+Route::get('/manage-about', [App\Http\Controllers\SiteConfigurationController::class, 'manageAbout'])->name('manage.about');
+Route::get('/manage-services', [App\Http\Controllers\SiteConfigurationController::class, 'manageServices'])->name('manage.services');
+Route::get('/manage-choose-us', [App\Http\Controllers\SiteConfigurationController::class, 'manageChooseUs'])->name('manage.choose-us');
+Route::get('/manage-footer', [App\Http\Controllers\SiteConfigurationController::class, 'manageFooter'])->name('manage.footer');
 
 
 Route::post('/post-sliders', [App\Http\Controllers\SiteConfigurationController::class, 'postSliders'])->name('sliders.post');
