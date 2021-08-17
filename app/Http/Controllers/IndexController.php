@@ -240,8 +240,8 @@ class IndexController extends Controller
 
 
 
-        $current_stock = (new Stock)->where('date', Carbon::yesterday()->toDateString())->get();
-        $current_news = (new News)->where('created_at', '>=', Carbon::now()->subMinutes(30)->format('Y-m-d H:i:s'))->orderBy('id', 'desc')->take(10)->get();
+        $current_stock = (new Stock)->take(100)->get();
+        $current_news = (new News)->where('created_at', '>=', Carbon::now()->subMinutes(30)->format('Y-m-d H:i:s'))->orderBy('id', 'desc')->take(3)->get();
 
         if ($current_stock->count() == 0) {
             $queryString = http_build_query([
@@ -311,8 +311,10 @@ class IndexController extends Controller
 
 
         }
-        $current_stocks = (new Stock)->where('date', Carbon::yesterday()->toDateString())->get();
-        $current_news = (new News)::orderBy('id', 'DESC')->take(10)->get();
+        $current_stocks = (new Stock)->take(100)->get();
+        $current_news = (new News)->where('created_at', '>=', Carbon::now()->subMinutes(30)->format('Y-m-d H:i:s'))->orderBy('id', 'desc')->take(3)->get();
+
+
 
         return view('welcome', compact(['slider_configuration', 'about_configuration', 'service_configurations', 'footer_configuration', 'choose_configuration', 'heading', 'current_stocks', 'current_news']));
 
@@ -351,4 +353,36 @@ class IndexController extends Controller
 
 
     }
+    public function getNews()
+    {
+        $current_news = (new News)::orderBy('id', 'DESC')->take(10)->get();
+        $data['view'] = View('components.blogs',
+            ['current_news' => $current_news])->render();
+
+        return $data;
+
+
+    }
+    public function getChooseUs()
+    {
+        $choose_configuration = ChooseUsConfiguration::first();
+        $data['view'] = View('components.choose-us',
+            ['choose_configuration' => $choose_configuration])->render();
+
+        return $data;
+
+
+    }
+
+    public function getLatestPosts()
+    {
+        $current_news = (new News)::orderBy('id', 'DESC')->take(3)->get();
+        $data['view'] = View('components.latest-posts',
+            ['current_news' => $current_news])->render();
+
+        return $data;
+
+
+    }
+
 }

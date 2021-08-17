@@ -98,8 +98,11 @@ class SiteConfigurationController extends Controller
 
 
             }
-            $filename_new_1 = "1" . '.' . $request->file('image_slider1')->getClientOriginalExtension();
-            Image::make($request->file('image_slider1'))->save(public_path('assets/images/slider/' . $filename_new_1));
+            $filename_new_1 = "1" . '.webp';
+            $img = \Intervention\Image\Facades\Image::make($request->file('image_slider1'))->fit(1920, 850, function ($constraint) {
+                $constraint->aspectRatio();
+            })->encode('webp', 0.7);
+            $img->save(public_path('assets/images/slider/' . $filename_new_1));
 
         }
         if ($request->has('image_slider2')) {
@@ -108,8 +111,13 @@ class SiteConfigurationController extends Controller
 
 
             }
-            $filename_new_2 = "2" . '.' . $request->file('image_slider2')->getClientOriginalExtension();
-            Image::make($request->file('image_slider2'))->save(public_path('assets/images/slider/' . $filename_new_2));
+            $filename_new_2 = "2" . '.webp';
+
+            $img = \Intervention\Image\Facades\Image::make($request->file('image_slider2'))->fit(1920, 850, function ($constraint) {
+                $constraint->aspectRatio();
+            })->encode('webp', 0.7);
+            $img->save(public_path('assets/images/slider/' . $filename_new_2));
+
 
         }
         if ($request->has('mobile_slider1')) {
@@ -118,8 +126,13 @@ class SiteConfigurationController extends Controller
 
 
             }
-            $filename_new_3 = "mobile-1" . '.' . $request->file('mobile_slider1')->getClientOriginalExtension();
-            Image::make($request->file('mobile_slider1'))->save(public_path('assets/images/slider/' . $filename_new_3));
+            $filename_new_3 = "mobile-1" . '.webp';
+
+            $img = \Intervention\Image\Facades\Image::make($request->file('mobile_slider1'))->fit(600, 850, function ($constraint) {
+                $constraint->aspectRatio();
+            })->encode('webp', 0.7);
+            $img->save(public_path('assets/images/slider/' . $filename_new_3));
+
 
         }
         if ($request->has('mobile_slider2')) {
@@ -128,11 +141,14 @@ class SiteConfigurationController extends Controller
 
 
             }
-            $filename_new_4 = "mobile-2" . '.' . $request->file('mobile_slider2')->getClientOriginalExtension();
-            Image::make($request->file('mobile_slider2'))->save(public_path('assets/images/slider/' . $filename_new_4));
+            $filename_new_4 = "mobile-2" . '.webp';
+            $img = \Intervention\Image\Facades\Image::make($request->file('mobile_slider2'))->fit(600, 850, function ($constraint) {
+                $constraint->aspectRatio();
+            })->encode('webp', 0.7);
+            $img->save(public_path('assets/images/slider/' . $filename_new_4));
+//            Image::make($request->file('mobile_slider2'))->save(public_path('assets/images/slider/' . $filename_new_4));
 
         }
-
 
 
         $slider_configuration->update([
@@ -174,9 +190,15 @@ class SiteConfigurationController extends Controller
             if (File::exists($filename_1)) {
                 File::delete($filename_1);  // or unlink($filename);
             }
-            $filename_new_1 = "about_image" . '.' . $request->file('image_about')->getClientOriginalExtension();
+            $filename_new_1 = "about_image" . '.webp';
+            $img = \Intervention\Image\Facades\Image::make($request->file('image_about'))->fit(570, 370, function ($constraint) {
+                $constraint->aspectRatio();
+            })->encode('webp', 0.7);
+            $img->save(public_path('assets/images/about/' . $filename_new_1));
 
-            Image::make($request->file('image_about'))->save(public_path('assets/images/about/' . $filename_new_1));
+//            $filename_new_1 = "about_image" . '.' . $request->file('image_about')->getClientOriginalExtension();
+//
+//            Image::make($request->file('image_about'))->save(public_path('assets/images/about/' . $filename_new_1));
         }
         $about_configuration->update([
             'about_us_title' => $request->about_us_title,
@@ -317,9 +339,15 @@ class SiteConfigurationController extends Controller
             if (File::exists($filename_1)) {
                 File::delete($filename_1);  // or unlink($filename);
             }
-            $filename_new_1 = "image_choose_us" . '.' . $request->file('image_choose_us')->getClientOriginalExtension();
+            $filename_new_1 = "image_choose_us" . '.webp';
+            $img = \Intervention\Image\Facades\Image::make($request->file('image_choose_us'))->fit(750, 730, function ($constraint) {
+                $constraint->aspectRatio();
+            })->encode('webp', 0.7);
+            $img->save(public_path('assets/images/whychooseus/' . $filename_new_1));
 
-            Image::make($request->file('image_choose_us'))->save(public_path('assets/images/whychooseus/' . $filename_new_1));
+//            $filename_new_1 = "image_choose_us" . '.' . $request->file('image_choose_us')->getClientOriginalExtension();
+//
+//            Image::make($request->file('image_choose_us'))->save(public_path('assets/images/whychooseus/' . $filename_new_1));
         }
 
         $choose_configuration->update([

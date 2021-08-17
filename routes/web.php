@@ -18,6 +18,9 @@ Route::get('/services', [App\Http\Controllers\AboutController::class, 'getServic
 Route::get('/about-us', [App\Http\Controllers\AboutController::class, 'aboutReadMore'])->name('about-us.read-more');
 Route::get('/choose-us', [App\Http\Controllers\AboutController::class, 'chooseReadMore'])->name('choose-us.read-more');
 Route::get('/download-profile', [App\Http\Controllers\AboutController::class, 'downloadProfile'])->name('download.profile');
+Route::get('/get-news', [App\Http\Controllers\IndexController::class, 'getNews'])->name('iposaudi.news');
+Route::get('/get-choose-us', [App\Http\Controllers\IndexController::class, 'getChooseUs'])->name('iposaudi.choose-us');
+Route::get('/latest-posts', [App\Http\Controllers\IndexController::class, 'getLatestPosts'])->name('iposaudi.latest-posts');
 Route::post('/iposaudi-contact', [App\Http\Controllers\IndexController::class, 'postContact'])->name('iposaudi.contact');
 
 Auth::routes();

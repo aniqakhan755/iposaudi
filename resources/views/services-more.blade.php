@@ -15,15 +15,17 @@
         <!-- Breadcrumbs Section End -->
 
         <!-- Services Section Start -->
-        <div id="rs-services" class="rs-services style1 modify2 pt-100 pb-84 md-pt-80 md-pb-64">
+        <div id="rs-services" class="rs-services style9 modify2 pt-100 pb-84 md-pt-80 md-pb-64">
             <div class="container">
                 <div class="row gutter-16">
 
-                    @foreach($service_configurations as $service_configuration)
+                    @foreach($service_configurations as $index => $service_configuration)
+                        <?php $ext = '.png';
+                        $index = $index +1; ?>
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-16">
                             <div class="service-wrap text-center">
                                 <div class="icon-part">
-                                    <img src="{{asset('assets/images/services/style9/'.$service_configuration->service_icon)}}" alt="">
+                                    <img src="assets/images/service-icons/{{$index.$ext}}" alt="{{$service_configuration->service_title}}">
                                 </div>
                                 <h5 class="title">{{$service_configuration->service_title}}</h5>
                                 {{--                        <div class="desc">{{$service_configuration->service_desc}}</div>--}}
@@ -34,23 +36,4 @@
             </div>
         </div>
         <!-- Services Section End -->
-
-        <!-- Cta Section Start -->
-        <div class="rs-cta bg21 pt-90 pb-100 md-pt-68 md-pb-80">
-            <div class="container">
-                <div class="sec-title text-center">
-                    <div class="sub-title modify white">Any plan to start a project</div>
-                    <h2 class="title3 white-color">Our Experts always ready to work <br> with you.</h2>
-                    <div class="btn-part">
-                        <a class="readon banner-style" href="contact.html">Get started</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Cta Section End -->
-
-
-
-
-
 @endsection

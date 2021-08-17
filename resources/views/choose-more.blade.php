@@ -3,6 +3,13 @@
     @include('components.includes.page-header')
 @endsection
 @section('main-content')
+    <div class="rs-breadcrumbs bg-1">
+        <div class="container">
+            <div class="content-part text-center">
+                <h1 class="breadcrumbs-title white-color mb-0">Profile</h1>
+            </div>
+        </div>
+    </div>
     <!-- About Section Start -->
     <div class="rs-about inner pt-100 lg-pt-92 md-pt-80 pb-100 md-pb-80">
         <div class="container">
@@ -12,7 +19,7 @@
                         <img src="{{asset('assets/images/whychooseus/'.$choose_configuration->image_choose_us)}}" alt="">
                         <div class="author-info">
                             <h3 class="name">Faisal Siddique</h3>
-                            <span class="designation">CFO & Founder</span>
+                            <span class="designation">Chief Financial Officer</span>
                         </div>
                     </div>
                 </div>

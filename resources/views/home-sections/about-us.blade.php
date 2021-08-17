@@ -5,11 +5,19 @@
         <div class="row y-middle align-about-text">
             <div class="col-lg-6 md-mb-30">
                 <div class="image-part">
-                    <img src="{{asset('assets/images/about/'.$about_configuration->image_about)}}" alt="">
+                    <img loading="lazy" src="{{asset('assets/images/about/'.$about_configuration->image_about)}}" alt="About Image">
                 </div>
             </div>
             <div class="col-lg-6 pl-50 lg-pl-35 md-pl-15">
-               <?php $out = strlen($about_configuration->about_us_desc) > 245 ? substr($about_configuration->about_us_desc,0,245)."......" : $about_configuration->about_us_desc; ?>
+                <?php
+                $out = $about_configuration->about_us_desc;
+
+                $pos = strpos($out, "</p>");
+
+
+                $link  = '<a class="ml-2 mr-2" href="/about-us">Read More</a>';
+                $out = substr($out, 0, $pos) . $link . '</p>';
+                ?>
                 <div class="sec-title">
                     <div class="sub-title gray-color">About Us</div>
                     <h2 class="title mb-30">{{$about_configuration->about_us_title}} <span class="d-block blue-color">{{$about_configuration->about_us_subtitle}} </span></h2>

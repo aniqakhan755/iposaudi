@@ -39,12 +39,9 @@
         $("#loading-center").on('click', function () {
             $("#loading").fadeOut(500);
         })
+
     })
 
-    //preloader
-    $(window).on('load', function () {
-        $("#loader").delay(1000).fadeOut(500);
-    })
 
     // Progress Bar Round
     $('.rs-pie').each(function () {
@@ -634,12 +631,16 @@
     }
 
 
-    $('#example-1').eocjsNewsticker({
-        speed: 25,
-        timeout: 0.5,
-        divider: '|',
-    });
+        $(document).ready(function () {
 
+            $('.ticker-row').removeClass('d-none');
+            $('#example-1').eocjsNewsticker({
+                speed: 25,
+                timeout: 0.5,
+                divider: '|',
+
+            });
+        });
 
     // Sticky Sidebar
     $(function () {
@@ -667,5 +668,58 @@
             });
         }
     });
+
+                    $.get('/get-news',  // url
+                        function (data, textStatus, jqXHR) {  // success callback
+                            var owl = $("#news-section");
+                            owl.trigger('destroy.owl.carousel');
+                            $('#news-loader').hide();
+                            owl.html(data.view);
+                            owl.owlCarousel({
+                                items: 3,
+                                margin: 30,
+                                navigation: true,
+                                autoplay: true,
+                                loop: true,
+                                hoverpause: true,
+                                'autoplay-timeout': 5000,
+                                dots: false,
+                                'smart-speed': 800,
+                                nav: false,
+                                'nav-speed': false,
+                                'center-mode': false,
+                                responsiveClass: true,
+                                responsive: {
+                                    0: {
+                                        items: 1,
+                                        nav: false
+                                    },
+                                    600: {
+                                        items: 1,
+                                        nav: false,
+                                    },
+                                    1000: {
+                                        items: 3,
+                                        nav: false,
+                                    }
+
+                                }
+                            });
+
+                        });
+    $.get('/get-choose-us',  // url
+        function (data, textStatus, jqXHR) {  // success callback
+            var container = $("#choose-container");
+            $('#choose-us-loader').hide();
+            container.html(data.view);
+
+        });
+    $.get('/latest-posts',  // url
+        function (data, textStatus, jqXHR) {  // success callback
+            var container = $(".footer-post");
+            $('#post-loader').hide();
+            container.html(data.view);
+
+        });
 
 })(jQuery);

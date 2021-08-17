@@ -45,21 +45,36 @@
                 <div class="col-lg-4 col-md-12 col-sm-12 footer-widget">
                     <h4 class="widget-title">Latest Posts</h4>
                     <div class="footer-post">
-                        @foreach($current_news as $index => $news)
-                            <?php $title = strlen($news->title) > 60 ? substr($news->title,0,60)."......" : $news->title; ?>
-                            @if($index < 3 )
-                            <div class="post-wrap mb-15">
 
-                                <div class="post-img">
-                                    <a href="{{$news->url}}"><img src="{{$news->image}}" alt="Footer Image"></a>
-                                </div>
-                                <div class="post-desc" style="display:block;">
-                                    <a href="{{$news->url}}">{{$title}}</a>
-                                </div>
+                        <div class="text-center" id="post-loader">
+                            <div class="line">
+                                <div class="footer-comb"></div>
                             </div>
-                            @endif
-                        @endforeach
+                            <div class="line">
+                                <div class="footer-comb"></div>
+                            </div>
+                            <div class="line">
+                                <div class="footer-comb"></div>
+                            </div>
+                            <div class="line">
+                                <div class="footer-comb"></div>
+                            </div>
+                            <div class="line">
+                                <div class="footer-comb"></div>
+                            </div>
+                            <div class="line">
+                                <div class="footer-comb"></div>
+                            </div>
+                            <div class="line">
+                                <div class="footer-comb"></div>
+                            </div>
+                            <div class="line">
+                                <div class="footer-comb"></div>
+                            </div>
+                            <div class="circle"></div>
+                            <!--End preloader here -->
 
+                        </div>
                     </div>
                 </div>
             </div>

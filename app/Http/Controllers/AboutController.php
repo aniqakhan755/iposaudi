@@ -20,7 +20,7 @@ class AboutController extends Controller
         $choose_configuration = (new ChooseUsConfiguration)->where('id', 1)->first();
         $footer_configuration = (new FooterConfiguration)->where('id',1)->first();
         $current_stocks = (new Stock)->where('date', Carbon::yesterday()->toDateString())->get();
-        $current_news = (new News)::orderBy('id', 'DESC')->take(10)->get();
+        $current_news = (new News)::orderBy('id', 'DESC')->take(3)->get();
         return view('choose-more', compact(['choose_configuration','footer_configuration','current_stocks','current_news']));
     }
     public function aboutReadMore()
@@ -28,7 +28,7 @@ class AboutController extends Controller
         $about_configuration = (new AboutConfiguration)->where('id', 1)->first();
         $footer_configuration = (new FooterConfiguration)->where('id',1)->first();
         $current_stocks = (new Stock)->where('date', Carbon::yesterday()->toDateString())->get();
-        $current_news = (new News)::orderBy('id', 'DESC')->take(10)->get();
+        $current_news = (new News)::orderBy('id', 'DESC')->take(3)->get();
         return view('about-more', compact(['about_configuration','footer_configuration','current_stocks','current_news']));
     }
     public function getServices()
@@ -37,7 +37,7 @@ class AboutController extends Controller
         $heading = (new Heading)->where('id', 1)->first();
         $footer_configuration = (new FooterConfiguration)->where('id',1)->first();
         $current_stocks = (new Stock)->where('date', Carbon::yesterday()->toDateString())->get();
-        $current_news = (new News)::orderBy('id', 'DESC')->take(10)->get();
+        $current_news = (new News)::orderBy('id', 'DESC')->take(3)->get();
         return view('services-more', compact(['service_configurations','heading','footer_configuration','current_stocks','current_news']));
     }
     public function downloadProfile()
