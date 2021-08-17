@@ -346,12 +346,19 @@ class IndexController extends Controller
         return back()->withSuccess('Message Successfully Sent!');
     }
 
+
     public function getMessages()
     {
         $messages = Message::all();
         return view('manage-messages', compact('messages'));
 
 
+    }
+    public function getIpoReadinessDoc($section)
+    {
+        $footer_configuration = FooterConfiguration::first();
+        $current_stocks = (new Stock)->where('date', \Illuminate\Support\Carbon::yesterday()->toDateString())->get();
+        return view('ipo-readiness', compact(['footer_configuration','current_stocks','section']));
     }
     public function getNews()
     {

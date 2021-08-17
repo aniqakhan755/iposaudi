@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col-lg-3 pl-0">
                         <div class="logo-area">
-                            <a href="{{route('welcome')}}"><img src="assets/images/logo-website.png" alt="logo"></a>
+                            <a href="{{route('welcome')}}"><img src="{{asset('assets/images/logo-website.png')}}" alt="logo"></a>
                         </div>
                     </div>
                     <div class="col-lg-9 text-right pl-0">
