@@ -56,6 +56,21 @@
             font-size: 18px;
             color: #1c3988;
         }
+
+        .up-next {
+            color: #1c3988;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .square-ul {
+            list-style-type: square;
+            padding-left: 40px;
+        }
+
+        #sub-nav .resetCMSListMenuHighlightedLI {
+            background: #1c3988;
+        }
     </style>
 
 @endsection
@@ -72,26 +87,18 @@
             </div>
         </div>
     </div>
+    <?php $section_list = ['overview', 'ipo-journey', 'pre-ipo-consideration', 'expert-help']?>
     <!-- Breadcrumbs Section End -->
     <div class="bg-smoke">
         <div class=" inner pt-100 lg-pt-92 md-pt-80 pb-100 md-pb-80">
             <div class="container">
                 <ul id="sub-nav" class="resetCMSListMenuUL">
-                    <li class="resetCMSListMenuHighlightedLI">
-                        <a class="resetCMSListMenuLinkHighlighted"
-                           href="{{route('ipo.readiness','overview')}}">Overview</a>
-                    </li>
+                    @foreach($section_list as $sec)
 
-                    <li class="resetCMSListMenuLI"><a href="{{route('ipo.readiness','ipo-journey')}}"
-                                                      class="resetCMSListMenuLink">IPO Journey</a></li>
-                    <li class="resetCMSListMenuLI"><a
-                            href="{{route('ipo.readiness','pre-ipo-consideration')}}"
-                            class="resetCMSListMenuLink">Pre-IPO Consideration
-                        </a></li>
-                    <li class="resetCMSListMenuLI"><a
-                            href="{{route('ipo.readiness','expert-help')}}"
-                            class="resetCMSListMenuLink">Expert help</a></li>
-
+                        <li @if($sec === $section)class="resetCMSListMenuHighlightedLI" @endif>
+                            <a href="{{route('ipo.readiness',$sec)}}">{{str_replace("-"," ",$sec)}}</a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
             <div class="item-view section no-top-padding">
@@ -100,7 +107,7 @@
                         <div class="col-md-12">
                             <div class="white-bg clearfix">
                                 <div class="padded-content">
-                                  @include('components.ipo-readiness-sections.'.$section)
+                                    @include('components.ipo-readiness-sections.'.$section)
                                 </div>
                             </div>
                         </div>

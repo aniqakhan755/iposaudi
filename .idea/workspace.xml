@@ -21,8 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="dbddb829-861a-4aa2-878b-2bcd5d9378d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/page-header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/page-header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/ipo-readiness-sections/expert-help.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/ipo-readiness-sections/expert-help.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/ipo-readiness-sections/ipo-journey.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/ipo-readiness-sections/ipo-journey.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/ipo-readiness-sections/overview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/ipo-readiness-sections/overview.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/ipo-readiness-sections/pre-ipo-consideration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/ipo-readiness-sections/pre-ipo-consideration.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ipo-readiness.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ipo-readiness.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +215,8 @@
       <workItem from="1628868344867" duration="172000" />
       <workItem from="1629121381003" duration="1601000" />
       <workItem from="1629186900740" duration="2884000" />
-      <workItem from="1629230053603" duration="4085000" />
+      <workItem from="1629230053603" duration="4711000" />
+      <workItem from="1629295227475" duration="2008000" />
     </task>
     <servers />
   </component>

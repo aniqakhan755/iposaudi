@@ -43,6 +43,7 @@
                                         <li><a href="{{route('about-us.read-more')}}">About</a></li>
                                         <li><a href="{{route('services.read-more')}}">Services</a></li>
                                         <li><a href="{{route('choose-us.read-more')}}">Choose Us</a></li>
+                                        <li><a href="{{route('ipo.readiness','overview')}}">IPO Readiness</a></li>
 {{--                                        <li><a href="#rs-blog">Latest</a></li>--}}
                                         <li><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></li>
                                     </ul> <!-- //.nav-menu -->

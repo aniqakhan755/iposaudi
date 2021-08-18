@@ -9,7 +9,7 @@
         the process would be beneficial both from a cost and time perspective.
 
     </p>
-    <ul>
+    <ul class="square-ul">
         <li>
             Conduct a detailed analysis of the company’s financial health and identify other viable alternative funding
             opportunities
@@ -41,8 +41,8 @@
 <div class="row border-top mt-20">
     <div class="col-md-12">
         <div class="padded-content "><a class="headline clickable up-next"
-                                        href="https://www.bdoalamri.com/en-gb/services/advisory/capital-markets">
-                Up next: <span
+                                        href="{{route('ipo.readiness','overview')}}">
+               Back To: <span
                     class="after-icon hidden-desktop"> Overview </span></a>
         </div>
     </div>

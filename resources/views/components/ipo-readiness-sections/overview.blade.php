@@ -47,9 +47,9 @@
 <div class="row border-top mt-20">
     <div class="col-md-12">
         <div class="padded-content "><a class="headline clickable up-next"
-                                        href="https://www.bdoalamri.com/en-gb/services/advisory/capital-markets">
+                                        href="{{route('ipo.readiness','ipo-journey')}}">
                 Up next: <span
-                    class="after-icon hidden-desktop"> Overview </span></a>
+                    class="after-icon hidden-desktop"> IPO Journey </span></a>
         </div>
     </div>
 </div>

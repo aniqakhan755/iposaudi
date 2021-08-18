@@ -41,6 +41,7 @@
                                         <li><a href="#rs-about">About</a></li>
                                         <li><a href="#rs-services">Services</a></li>
                                         <li><a href="#rs-blog">Latest</a></li>
+                                        <li><a href="{{route('ipo.readiness','overview')}}">IPO Readiness</a></li>
                                         <li><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></li>
                                     </ul> <!-- //.nav-menu -->
                                 </nav>

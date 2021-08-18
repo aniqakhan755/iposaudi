@@ -14,7 +14,7 @@
 
 
     </p>
-    <ul>
+    <ul class="mb-20 square-ul">
 
         <li>Market standing of company’s products and services:</li>
         <li>Experienced management:</li>
@@ -42,7 +42,7 @@
 
 
     </p>
-    <ul>
+    <ul class="mb-20 square-ul">
 
         <li>Equity story to improve organizational value</li>
         <li>Specification on usage of proceeds
@@ -72,7 +72,7 @@
 
 
     </h3>
-    <ul>
+    <ul class="mb-20 square-ul">
         <li> Uncertainties related to business</li>
         <li> Information on how IPO proceeds would be utilized</li>
         <li> Company’s current and potential dividend policy, along with limitations</li>
@@ -90,7 +90,7 @@
 
 
     </h3>
-    <ul>
+    <ul class="mb-20 square-ul">
         <li> Conducted by the underwriters’ counsel and includes a comprehensive analysis of the company and its
             management
         </li>
@@ -104,7 +104,7 @@
 
 
     </h3>
-    <ul>
+    <ul class="mb-20 square-ul">
         <li> Prepared by the lead underwriter to the interested investors to form an underwriting syndicate in order to
             apportion the shares.
         </li>
@@ -118,7 +118,7 @@
 
 
     </h3>
-    <ul>
+    <ul class="square-ul">
         <li> Final offer price negotiated and determined, along with the underwriter’s discount and net proceeds to the
             issuer
         </li>
@@ -134,9 +134,9 @@
 <div class="row border-top mt-20">
     <div class="col-md-12">
         <div class="padded-content "><a class="headline clickable up-next"
-                                        href="https://www.bdoalamri.com/en-gb/services/advisory/capital-markets">
+                                        href="{{route('ipo.readiness','expert-help')}}">
                 Up next: <span
-                    class="after-icon hidden-desktop"> Overview </span></a>
+                    class="after-icon hidden-desktop">Expert Help</span></a>
         </div>
     </div>
 </div>
