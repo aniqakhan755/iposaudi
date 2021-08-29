@@ -14,15 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('welcome');
 Route::get('/messages', [App\Http\Controllers\IndexController::class, 'getMessages'])->name('manage.messages');
+Route::get('/contact-us', [App\Http\Controllers\IndexController::class, 'getContactUs'])->name('ipo-saudi.contact-us');
 Route::get('/services', [App\Http\Controllers\AboutController::class, 'getServices'])->name('services.read-more');
 Route::get('/about-us', [App\Http\Controllers\AboutController::class, 'aboutReadMore'])->name('about-us.read-more');
 Route::get('/choose-us', [App\Http\Controllers\AboutController::class, 'chooseReadMore'])->name('choose-us.read-more');
 Route::get('/download-profile', [App\Http\Controllers\AboutController::class, 'downloadProfile'])->name('download.profile');
 Route::get('/get-news', [App\Http\Controllers\IndexController::class, 'getNews'])->name('iposaudi.news');
+Route::get('/blogs/{slug}',[App\Http\Controllers\IndexController::class, 'getBlogDetail'])->name('iposaudi.blog-detail');
 Route::get('/get-choose-us', [App\Http\Controllers\IndexController::class, 'getChooseUs'])->name('iposaudi.choose-us');
 Route::get('/latest-posts', [App\Http\Controllers\IndexController::class, 'getLatestPosts'])->name('iposaudi.latest-posts');
 Route::post('/iposaudi-contact', [App\Http\Controllers\IndexController::class, 'postContact'])->name('iposaudi.contact');
-Route::get('/ipo-readiness/{section}', [App\Http\Controllers\IndexController::class, 'getIpoReadinessDoc'])->name('ipo.readiness');
+Route::get('/ipo-readiness', [App\Http\Controllers\IndexController::class, 'getIpoReadinessDoc'])->name('ipo.readiness');
 
 Auth::routes();
 
@@ -32,9 +34,11 @@ Route::get('/manage-about', [App\Http\Controllers\SiteConfigurationController::c
 Route::get('/manage-services', [App\Http\Controllers\SiteConfigurationController::class, 'manageServices'])->name('manage.services');
 Route::get('/manage-choose-us', [App\Http\Controllers\SiteConfigurationController::class, 'manageChooseUs'])->name('manage.choose-us');
 Route::get('/manage-footer', [App\Http\Controllers\SiteConfigurationController::class, 'manageFooter'])->name('manage.footer');
+Route::get('/manage-blogs', [App\Http\Controllers\SiteConfigurationController::class, 'manageBlogs'])->name('manage.blogs');
 
-
+Route::get('/create-blog-post', [App\Http\Controllers\SiteConfigurationController::class, 'createBlogPost'])->name('blog.create-post');
 Route::post('/post-sliders', [App\Http\Controllers\SiteConfigurationController::class, 'postSliders'])->name('sliders.post');
+Route::post('/post-blog', [App\Http\Controllers\SiteConfigurationController::class, 'postBlog'])->name('blog.post');
 Route::post('/post-services', [App\Http\Controllers\SiteConfigurationController::class, 'postServices'])->name('services.post');
 Route::post('/post-about', [App\Http\Controllers\SiteConfigurationController::class, 'postAbout'])->name('about.post');
 Route::post('/post-footer', [App\Http\Controllers\SiteConfigurationController::class, 'postFooter'])->name('footer.post');

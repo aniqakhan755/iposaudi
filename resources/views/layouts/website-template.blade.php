@@ -8,6 +8,19 @@
     <meta name="application-name" content="IPO SAUDI">
     <title>IPO Saudi | Faisal Siddique CFO, CPA, CA, ACA, CMA, CertIFR</title>
     <meta name="description" content="25+ years of professional experience in Finance, Accounting and ERP. Helping you on your journey from private to Initial Public Offering IPO in Saudi.">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="subject" content="25+ years of professional experience in Finance, Accounting and ERP. Helping you on your journey from private to Initial Public Offering IPO in Saudi.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="IPO SAUDI">
+    <meta name="twitter:title" content="IPO Saudi | Faisal Siddique CFO, CPA, CA, ACA, CMA, CertIFR">
+    <meta name="twitter:image" content="https://iposaudi.com/assets/images/logo-website.png"/>
+    <meta name="twitter:description" content="25+ years of professional experience in Finance, Accounting and ERP. Helping you on your journey from private to Initial Public Offering IPO in Saudi.">
+    <meta property="og:site_name" content="IPO SAUDI"/>
+    <meta property="og:title" content="IPO Saudi | Faisal Siddique CFO, CPA, CA, ACA, CMA, CertIFR" />
+    <meta property="og:image" content="https://iposaudi.com/assets/images/logo-website.png"/>
+    <meta property="og:url" content="https://iposaudi.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="25+ years of professional experience in Finance, Accounting and ERP. Helping you on your journey from private to Initial Public Offering IPO in Saudi."/>
     <!-- responsive tag -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,11 +36,23 @@
     <link crossorigin="anonymous" rel='stylesheet' id='mvp-fonts-css' href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap">
     <link rel="stylesheet" type="text/css" href="{{asset('style.min.css')}}" async defer>
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.min.css')}}" async defer>
-    <style>
 
-
-
-    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-205629663-1">
+    </script>
+    <script async defer>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-205629663-1');
+    </script>
+    <script type='application/ld+json'>
+{
+  "@context": "http://www.schema.org",
+  "@type": "WebSite",
+  "name": "IPO SAUDI",
+  "url": "https://iposaudi.com/"
+}
+ </script>
     @yield('styles')
 </head>
 <body class="home-eight">

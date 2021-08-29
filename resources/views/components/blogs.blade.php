@@ -1,6 +1,7 @@
 @foreach($current_news as $news)
-    <?php $output = strlen($news->description) > 100 ? substr($news->description,0,100)."......" : $news->description; ?>
-    <?php $title = strlen($news->title) > 70 ? substr($news->title,0,70)."......" : $news->title; ?>
+    <?php $description = strip_tags($news->description);
+     $output = strlen($description) > 100 ? substr($description,0,100)."......" : $description;
+     $title = strlen($news->title) > 70 ? substr($news->title,0,70)."......" : $news->title; ?>
 
     <div class="blog-wrap">
         <div class="img-part">

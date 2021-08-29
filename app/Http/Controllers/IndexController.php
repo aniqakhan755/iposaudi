@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use App\Models\AboutConfiguration;
 use App\Models\ChooseUsConfiguration;
 use App\Models\FooterConfiguration;
@@ -13,6 +14,7 @@ use App\Models\SliderConfiguration;
 use App\Models\Stock;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class IndexController extends Controller
@@ -336,14 +338,17 @@ class IndexController extends Controller
         }
 
 
-        Message::create([
+        $message = Message::create([
             'name' => $request->name,
             'email' => $request->email,
             'message' => $request->message,
 
 
         ]);
-        return back()->withSuccess('Message Successfully Sent!');
+
+        $to = 'aniqk755@gmail.com';
+        Mail::to($to)->send(new ContactMail($message));
+        return back()->withSuccess('Message Successfully sent!');
     }
 
 
@@ -354,11 +359,11 @@ class IndexController extends Controller
 
 
     }
-    public function getIpoReadinessDoc($section)
+    public function getIpoReadinessDoc()
     {
         $footer_configuration = FooterConfiguration::first();
         $current_stocks = (new Stock)->where('date', \Illuminate\Support\Carbon::yesterday()->toDateString())->get();
-        return view('ipo-readiness', compact(['footer_configuration','current_stocks','section']));
+        return view('ipo-readiness', compact('footer_configuration','current_stocks'));
     }
     public function getNews()
     {
@@ -391,5 +396,26 @@ class IndexController extends Controller
 
 
     }
+    public function getContactUs()
+    {
+
+        $footer_configuration = FooterConfiguration::first();
+        $current_stocks = (new Stock)->where('date', \Illuminate\Support\Carbon::yesterday()->toDateString())->get();
+        return view('contact-us', compact(['footer_configuration','current_stocks']));
+
+    }
+    public function getBlogDetail($slug)
+    {
+        $footer_configuration = FooterConfiguration::first();
+        $current_stocks = (new Stock)->where('date', \Illuminate\Support\Carbon::yesterday()->toDateString())->get();
+        $url = env('BASE_URL').'/blogs/'.$slug;
+        $blog = News::where('url',$url)->first();
+        $current_news = (new News)->where('url','!=',$url)->orderBy('id', 'desc')->take(5)->get();
+
+        return view('blog-detail', compact('blog','footer_configuration','current_stocks','current_news'));
+
+
+    }
+
 
 }

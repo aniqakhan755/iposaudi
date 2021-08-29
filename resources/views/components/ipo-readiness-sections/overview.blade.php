@@ -24,19 +24,19 @@
         frame.
 
     </p>
-    <ul>
+    <ul class="square-ul">
         <li>
-            Increase transaction possibility in the IPO market:
+            Increase transaction possibility in the IPO market.
         </li>
 
 
         <li>
-            Prepare for pre-IPO and post-IPO phase:
+            Prepare for pre-IPO and post-IPO phase.
 
 
         </li>
         <li>
-            Execute IPO phase efficiently:
+            Execute IPO phase efficiently.
 
 
         </li>
@@ -46,10 +46,8 @@
 </div>
 <div class="row border-top mt-20">
     <div class="col-md-12">
-        <div class="padded-content "><a class="headline clickable up-next"
-                                        href="{{route('ipo.readiness','ipo-journey')}}">
-                Up next: <span
-                    class="after-icon hidden-desktop"> IPO Journey </span></a>
+        <div class="footer-padding nav nav-tabs footer-link">
+            <a data-toggle="tab" class="headline clickable up-next" href="#ipo-journey">Up next: <span class="after-icon hidden-desktop"> IPO Journey </span></a>
         </div>
     </div>
 </div>

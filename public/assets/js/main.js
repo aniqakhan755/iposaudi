@@ -669,7 +669,7 @@
         }
     });
 
-                    $.get('/get-news',  // url
+                    $.get('http://localhost/consultant-project/public/get-news',  // url
                         function (data, textStatus, jqXHR) {  // success callback
                             var owl = $("#news-section");
                             owl.trigger('destroy.owl.carousel');
@@ -707,14 +707,14 @@
                             });
 
                         });
-    $.get('/get-choose-us',  // url
+    $.get('http://localhost/consultant-project/public/get-choose-us',  // url
         function (data, textStatus, jqXHR) {  // success callback
             var container = $("#choose-container");
             $('#choose-us-loader').hide();
             container.html(data.view);
 
         });
-    $.get('/latest-posts',  // url
+    $.get('http://localhost/consultant-project/public/latest-posts',  // url
         function (data, textStatus, jqXHR) {  // success callback
             var container = $(".footer-post");
             $('#post-loader').hide();

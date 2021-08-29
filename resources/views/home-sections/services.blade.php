@@ -23,6 +23,6 @@
     </div>
 </div>
 <div class="bottom-link text-center mt-43 sm-mt-23">
-    Looking more better services <a href="{{route('services.read-more')}}">click here</a> to view all services.
+    Looking for more better services <a href="{{route('services.read-more')}}">Click here</a> to view all services.
 </div>
 <!-- Services Section End -->

@@ -40,9 +40,9 @@
 </div>
 <div class="row border-top mt-20">
     <div class="col-md-12">
-        <div class="padded-content "><a class="headline clickable up-next"
-                                        href="{{route('ipo.readiness','overview')}}">
-               Back To: <span
+        <div class="footer-padding footer-link nav nav-tabs "><a data-toggle="tab" class="headline clickable up-next"
+                                                     href="#overview">
+                Back To: <span
                     class="after-icon hidden-desktop"> Overview </span></a>
         </div>
     </div>

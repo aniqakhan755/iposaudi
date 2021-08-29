@@ -32,7 +32,7 @@
                             <div class="main-menu">
                                 <div class="mobile-menu">
                                     <a class="rs-menu-toggle">
-                                        <i class="fa fa-bars"></i>
+                                        <i class="fa fa-bars fa-2x"></i>
                                     </a>
                                 </div>
                                 <nav class="rs-menu pr-65 rs-menu-close">
@@ -41,8 +41,8 @@
                                         <li><a href="#rs-about">About</a></li>
                                         <li><a href="#rs-services">Services</a></li>
                                         <li><a href="#rs-blog">Latest</a></li>
-                                        <li><a href="{{route('ipo.readiness','overview')}}">IPO Readiness</a></li>
-                                        <li><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></li>
+                                        <li><a href="{{route('ipo.readiness')}}">IPO Readiness</a></li>
+                                        <li><a href="{{route('ipo-saudi.contact-us')}}">Contact</a></li>
                                     </ul> <!-- //.nav-menu -->
                                 </nav>
                             </div> <!-- //.main-menu -->

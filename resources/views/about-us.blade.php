@@ -52,9 +52,9 @@
                                                     <div class="form-group">
                                                         <label for="">Upload About Image</label>
                                                         <input type="file" class="form-control" id="myFile" name="image_about" accept="image/png, image/gif, image/jpeg">
-                                                        <p class="color-red">Image Size: 768 x 731</p>
                                                     </div>
-                                                </div>
+                                                    <p class="color-red">Image Size: 768 x 731</p>
+                                               </div>
                                             </div>
                                         </fieldset>
 

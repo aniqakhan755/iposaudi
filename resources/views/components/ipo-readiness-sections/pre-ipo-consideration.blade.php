@@ -133,8 +133,8 @@
 </div>
 <div class="row border-top mt-20">
     <div class="col-md-12">
-        <div class="padded-content "><a class="headline clickable up-next"
-                                        href="{{route('ipo.readiness','expert-help')}}">
+        <div class="footer-padding nav nav-tabs footer-link "><a data-toggle="tab" class="headline clickable up-next"
+                                        href="#expert-help">
                 Up next: <span
                     class="after-icon hidden-desktop">Expert Help</span></a>
         </div>

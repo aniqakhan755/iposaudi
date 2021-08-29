@@ -21,13 +21,21 @@
         <li> Listing on exchange</li>
 
     </ul>
+{{--    <div class="row">--}}
+{{--        <div class="col-12">--}}
+{{--            <div class="image-part">--}}
+{{--                <img src="{{asset('assets/images/info.jpg')}}" style="max-height:500px; max-width:100%;" alt="IPO Journey Illustration">--}}
+
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
 
 </div>
 <div class="row border-top mt-20">
     <div class="col-md-12">
-        <div class="padded-content "><a class="headline clickable up-next"
-                                        href="{{route('ipo.readiness','pre-ipo-consideration')}}">
+        <div class="footer-padding nav nav-tabs footer-link"><a data-toggle="tab" class="headline clickable up-next"
+                                        href="#pre-ipo-consideration">
                 Up next: <span
                     class="after-icon hidden-desktop">Pre-IPO Consideration</span></a>
         </div>

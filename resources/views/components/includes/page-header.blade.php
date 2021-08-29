@@ -8,7 +8,7 @@
                 <div class="toolbar-contact">
                     <div id="example-1">
                         @foreach($current_stocks as $index => $stock)
-                            @if($index != 0)|@endif<strong class="ml-1">{{$stock->name}}</strong> <span>{{$stock->price}}</span><span
+                            @if($index != 0)|@endif<span style="font-weight:700;" class="ml-1">{{$stock->name}}</span>  <span>{{$stock->price}}</span><span
                                 class=" @if($stock->difference < 0)color-red @else color-green @endif mr-1"> {{$stock->difference}} ({{$stock->percentage}}%)</span>
                         @endforeach
                     </div>
@@ -34,7 +34,7 @@
                             <div class="main-menu">
                                 <div class="mobile-menu">
                                     <a class="rs-menu-toggle">
-                                        <i class="fa fa-bars"></i>
+                                        <i class="fa fa-bars fa-2x"></i>
                                     </a>
                                 </div>
                                 <nav class="rs-menu pr-65 rs-menu-close">
@@ -43,9 +43,9 @@
                                         <li><a href="{{route('about-us.read-more')}}">About</a></li>
                                         <li><a href="{{route('services.read-more')}}">Services</a></li>
                                         <li><a href="{{route('choose-us.read-more')}}">Choose Us</a></li>
-                                        <li><a href="{{route('ipo.readiness','overview')}}">IPO Readiness</a></li>
+                                        <li><a href="{{route('ipo.readiness')}}">IPO Readiness</a></li>
 {{--                                        <li><a href="#rs-blog">Latest</a></li>--}}
-                                        <li><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></li>
+                                        <li><a href="{{route('ipo-saudi.contact-us')}}">Contact</a></li>
                                     </ul> <!-- //.nav-menu -->
                                 </nav>
                             </div> <!-- //.main-menu -->

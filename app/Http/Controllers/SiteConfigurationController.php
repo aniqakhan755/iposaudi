@@ -6,6 +6,7 @@ use App\Models\AboutConfiguration;
 use App\Models\ChooseUsConfiguration;
 use App\Models\FooterConfiguration;
 use App\Models\Heading;
+use App\Models\News;
 use App\Models\ServiceConfiguration;
 use App\Models\SliderConfiguration;
 use Illuminate\Http\Request;
@@ -32,19 +33,32 @@ class SiteConfigurationController extends Controller
      */
     public function manageSliders()
     {
-        $slider_configuration = (new SliderConfiguration)->where('id', 1)->first();
+        $slider_configuration = SliderConfiguration::first();
         return view('manage-sliders', compact('slider_configuration'));
+    }
+
+    public function manageBlogs()
+    {
+        $news = News::orderBy('id', 'Desc')->take(10)->get();
+
+        return view('manage-blogs', compact('news'));
     }
 
     public function manageChooseUs()
     {
-        $choose_configuration = (new ChooseUsConfiguration)->where('id', 1)->first();
+        $choose_configuration = ChooseUsConfiguration::first();
         return view('manage-choose-us', compact('choose_configuration'));
+    }
+
+    public function createBlogPost()
+    {
+
+        return view('create-blog');
     }
 
     public function manageAbout()
     {
-        $about_configuration = (new AboutConfiguration)->where('id', 1)->first();
+        $about_configuration = AboutConfiguration::first();
 
         return view('about-us', compact('about_configuration'));
     }
@@ -52,14 +66,14 @@ class SiteConfigurationController extends Controller
     public function manageServices()
     {
         $service_configurations = (new ServiceConfiguration)->all();
-        $heading = (new Heading)->where('id', 1)->first();
+        $heading = (new Heading)->first();
 
         return view('manage-services', compact('service_configurations', 'heading'));
     }
 
     public function manageFooter()
     {
-        $footer_configuration = (new FooterConfiguration)->where('id', 1)->first();
+        $footer_configuration = FooterConfiguration::first();
 
         return view('manage-footer', compact('footer_configuration'));
     }
@@ -87,7 +101,7 @@ class SiteConfigurationController extends Controller
         $filename_new_2 = '';
         $filename_new_3 = '';
         $filename_new_4 = '';
-        $slider_configuration = (new SliderConfiguration)->where('id', 1)->first();
+        $slider_configuration = (new SliderConfiguration)->first();
         $filename_1 = public_path('assets/images/slider/') . $slider_configuration->image_slider1;
         $filename_2 = public_path('assets/images/slider/') . $slider_configuration->image_slider2;
         $filename_3 = public_path('assets/images/slider/') . $slider_configuration->mobile_slider1;
@@ -182,7 +196,7 @@ class SiteConfigurationController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
         }
-        $about_configuration = (new AboutConfiguration)->where('id', 1)->first();
+        $about_configuration = (new AboutConfiguration)->first();
         $filename_1 = public_path('assets/images/about/') . $about_configuration->image_about;
 
         $filename_new_1 = '';
@@ -212,6 +226,54 @@ class SiteConfigurationController extends Controller
 
 
     }
+
+    public function postBlog(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+
+            'image' => 'nullable|image|mimes:jpeg,jpg,webp',
+            'title' => 'required',
+            'description' => 'required',
+            'blog_content' => 'required',
+
+        ]);
+        $file_syntax = str_replace(' ', '-', strtolower($request->title));
+        $base_url = env('BASE_URL');
+
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
+        }
+        $files = [['width' => 770, 'height' => 300], ['width' => 350, 'height' => 200], ['width' => 80, 'height' => 45]];
+
+        $filename_new_1 = '';
+        if ($request->has('image')) {
+            foreach ($files as $file) {
+                $filename_new_1 = $file_syntax . '-' . $file['width'] . 'x' . $file['height'] . '.webp';
+                $img = \Intervention\Image\Facades\Image::make($request->file('image'))->fit($file['width'], $file['height'], function ($constraint) {
+                    $constraint->aspectRatio();
+                })->encode('webp', 0.7);
+                $img->save(public_path('assets/images/blogs/' . $filename_new_1));
+            }
+        }
+
+        News::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'content' => $request->blog_content,
+            'image' => $base_url . '/assets/images/blogs/' . $file_syntax . '-' . 350 . 'x' . 200 . '.webp',
+            'url' => $base_url . '/blogs/' . $file_syntax,
+            'pulished_date' => date('Y-m-d H:i:s'),
+            'source_name' => 'N/A',
+            'source_url' => 'N/A'
+
+
+        ]);
+        return redirect()->route('manage.blogs')->withSuccess('Blog successfully posted!');
+
+
+    }
+
 
     public function postServices(Request $request)
     {
@@ -249,7 +311,7 @@ class SiteConfigurationController extends Controller
             return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
         }
 
-        $heading = (new Heading)->where('id', 1)->first();
+        $heading = (new Heading)->first();
 
         $heading->update([
             'service_heading' => $request->service_heading,
@@ -266,7 +328,7 @@ class SiteConfigurationController extends Controller
     {
 
 
-        $footer_configuration = (new FooterConfiguration)->where('id', 1)->first();
+        $footer_configuration = (new FooterConfiguration)->first();
         $validator = Validator::make($request->all(), [
 
             'footer_bg' => 'nullable|image|mimes:jpeg,png,jpg',
@@ -317,7 +379,7 @@ class SiteConfigurationController extends Controller
     public function postChooseUs(Request $request)
     {
 
-        $choose_configuration = (new ChooseUsConfiguration)->where('id', 1)->first();
+        $choose_configuration = (new ChooseUsConfiguration)->first();
         $validator = Validator::make($request->all(), [
             'image_choose_us' => 'nullable|image|mimes:jpeg,png,jpg',
             'choose_us_title' => 'required',

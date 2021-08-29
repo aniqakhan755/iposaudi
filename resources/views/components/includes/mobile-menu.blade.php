@@ -51,6 +51,13 @@
                     <span>Services</span></a>
             </li>
             <li>
+                <a href="{{route('manage.blogs')}}">
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-layout"></div>
+                    </div>
+                    <span>Blogs</span></a>
+            </li>
+            <li>
                 <a href="{{route('manage.footer')}}">
                     <div class="icon-w">
                         <div class="os-icon os-icon-layout"></div>
