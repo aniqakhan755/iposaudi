@@ -16,7 +16,7 @@
     </div>
     <div id="rs-contact" class="rs-contact style1 inner pt-100 lg-pt-92 md-pt-80 pb-100 md-pb-80">
         <div class="container">
-            <div class="row mb-64 lg-mb-30 md-mb-0">
+            <div class="row mb-64 lg-mb-30 md-mb-0 sm-mb-20  sm-pr-20 sm-pl-20">
                 <form id="contact-form" class="contact-form" method="post" action="{{route('iposaudi.contact')}}">
                     @csrf
                     <div class="row">

@@ -35,10 +35,13 @@ Route::get('/manage-services', [App\Http\Controllers\SiteConfigurationController
 Route::get('/manage-choose-us', [App\Http\Controllers\SiteConfigurationController::class, 'manageChooseUs'])->name('manage.choose-us');
 Route::get('/manage-footer', [App\Http\Controllers\SiteConfigurationController::class, 'manageFooter'])->name('manage.footer');
 Route::get('/manage-blogs', [App\Http\Controllers\SiteConfigurationController::class, 'manageBlogs'])->name('manage.blogs');
+Route::get('/manage-ipos', [App\Http\Controllers\SiteConfigurationController::class, 'manageIPOs'])->name('manage.ipos');
 
 Route::get('/create-blog-post', [App\Http\Controllers\SiteConfigurationController::class, 'createBlogPost'])->name('blog.create-post');
+Route::get('/add-ipo', [App\Http\Controllers\SiteConfigurationController::class, 'addIPO'])->name('ipo.add-ipo');
 Route::post('/post-sliders', [App\Http\Controllers\SiteConfigurationController::class, 'postSliders'])->name('sliders.post');
 Route::post('/post-blog', [App\Http\Controllers\SiteConfigurationController::class, 'postBlog'])->name('blog.post');
+Route::post('/add-ipo', [App\Http\Controllers\SiteConfigurationController::class, 'postIPO'])->name('ipo.post');
 Route::post('/post-services', [App\Http\Controllers\SiteConfigurationController::class, 'postServices'])->name('services.post');
 Route::post('/post-about', [App\Http\Controllers\SiteConfigurationController::class, 'postAbout'])->name('about.post');
 Route::post('/post-footer', [App\Http\Controllers\SiteConfigurationController::class, 'postFooter'])->name('footer.post');

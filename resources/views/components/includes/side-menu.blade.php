@@ -77,6 +77,13 @@
                 </div>
                 <span>Messages</span></a>
         </li>
+        <li>
+            <a href="{{route('manage.ipos')}}">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-layout"></div>
+                </div>
+                <span>IPOs</span></a>
+        </li>
 
 
 

@@ -6,9 +6,11 @@ use App\Models\AboutConfiguration;
 use App\Models\ChooseUsConfiguration;
 use App\Models\FooterConfiguration;
 use App\Models\Heading;
+use App\Models\Ipos;
 use App\Models\News;
 use App\Models\ServiceConfiguration;
 use App\Models\SliderConfiguration;
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
@@ -44,6 +46,13 @@ class SiteConfigurationController extends Controller
         return view('manage-blogs', compact('news'));
     }
 
+    public function manageIPOs()
+    {
+        $ipos = Ipos::orderBy('id', 'Desc')->get();
+
+        return view('manage-ipos', compact('ipos'));
+    }
+
     public function manageChooseUs()
     {
         $choose_configuration = ChooseUsConfiguration::first();
@@ -54,6 +63,12 @@ class SiteConfigurationController extends Controller
     {
 
         return view('create-blog');
+    }
+
+    public function addIPO()
+    {
+
+        return view('add-ipo');
     }
 
     public function manageAbout()
@@ -274,6 +289,41 @@ class SiteConfigurationController extends Controller
 
     }
 
+    public function postIPO(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+
+            'company_name' => 'required',
+            'market_type' => 'required',
+            'instrument' => 'required',
+            'offering_size' => 'required',
+            'offering_price' => 'required',
+            'offering_date' => 'required',
+            'closing_date' => 'required',
+
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
+        }
+        $offering_date = new DateTime($request->offering_date);
+        $closing_date = new DateTime($request->closing_date);
+
+
+        Ipos::create([
+            'company_name' => $request->company_name,
+            'market_type' => $request->market_type,
+            'instrument' => $request->instrument,
+            'offering_price' => $request->offering_price,
+            'offering_size' => $request->offering_size,
+            'offering_date' =>$offering_date->format('Y-m-d'),
+            'closing_date' => $closing_date->format('Y-m-d'),
+
+
+        ]);
+        return redirect()->route('manage.ipos')->withSuccess('IPO successfully added!');
+
+
+    }
 
     public function postServices(Request $request)
     {
