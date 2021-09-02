@@ -44,13 +44,13 @@
     <div class="col-sm-6">
         <div class="form-group">
             <label for="">Offering Date <span class="color-red">*</span></label>
-            <input class="single-daterange form-control" name="offering_date" placeholder="Offering Date" type="text" value="01/08/2021">
+            <input class="single-daterange form-control" name="offering_date" placeholder="Offering Date" type="text" value="2021/01/01">
         </div>
     </div>
     <div class="col-sm-6">
         <div class="form-group">
             <label for="">Closing Date <span class="color-red">*</span></label>
-            <input class="single-daterange form-control" name="closing_date" placeholder="Closing Date" type="text" value="01/09/2021">
+            <input class="single-daterange form-control" name="closing_date" placeholder="Closing Date" type="text" value="2021/12/31">
         </div>
     </div>
 </div>

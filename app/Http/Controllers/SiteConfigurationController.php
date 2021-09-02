@@ -10,6 +10,7 @@ use App\Models\Ipos;
 use App\Models\News;
 use App\Models\ServiceConfiguration;
 use App\Models\SliderConfiguration;
+use Carbon\Carbon;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -305,8 +306,8 @@ class SiteConfigurationController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput()->with('error', 'Error storing record, try again.');
         }
-        $offering_date = new DateTime($request->offering_date);
-        $closing_date = new DateTime($request->closing_date);
+        $closing_date = Carbon::createFromFormat('Y/m/d', $request->closing_date)->format('Y-m-d');
+        $offering_date = Carbon::createFromFormat('Y/m/d', $request->offering_date)->format('Y-m-d');
 
 
         Ipos::create([
@@ -315,8 +316,8 @@ class SiteConfigurationController extends Controller
             'instrument' => $request->instrument,
             'offering_price' => $request->offering_price,
             'offering_size' => $request->offering_size,
-            'offering_date' =>$offering_date->format('Y-m-d'),
-            'closing_date' => $closing_date->format('Y-m-d'),
+            'offering_date' => $offering_date,
+            'closing_date' => $closing_date,
 
 
         ]);

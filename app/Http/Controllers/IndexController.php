@@ -7,12 +7,14 @@ use App\Models\AboutConfiguration;
 use App\Models\ChooseUsConfiguration;
 use App\Models\FooterConfiguration;
 use App\Models\Heading;
+use App\Models\Ipos;
 use App\Models\Message;
 use App\Models\News;
 use App\Models\ServiceConfiguration;
 use App\Models\SliderConfiguration;
 use App\Models\Stock;
 use Carbon\Carbon;
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
@@ -240,8 +242,6 @@ class IndexController extends Controller
         ];
 
 
-
-
         $current_stock = (new Stock)->take(100)->get();
         $current_news = (new News)->where('created_at', '>=', Carbon::now()->subMinutes(30)->format('Y-m-d H:i:s'))->orderBy('id', 'desc')->take(3)->get();
 
@@ -261,25 +261,22 @@ class IndexController extends Controller
             $apiResult = json_decode($json, true);
 
 
-
-
             foreach ($apiResult['data'] as $index => $value) {
-                if($apiResult['data'][$index] == [])
+                if ($apiResult['data'][$index] == [])
                     continue;
-                    $difference = round($apiResult['data'][$index]['close'] - $apiResult['data'][$index]['open'], 2);
-                    Stock::create([
-                        'symbol' => $apiResult['data'][$index]['symbol'],
-                        'name' => $symbols[$apiResult['data'][$index]['symbol']],
-                        'price' => $apiResult['data'][$index]['close'],
-                        'open' => $apiResult['data'][$index]['open'],
-                        'close' => $apiResult['data'][$index]['close'],
-                        'high' => $apiResult['data'][$index]['high'],
-                        'low' => $apiResult['data'][$index]['low'],
-                        'difference' => $difference,
-                        'percentage' => round((100 * ($apiResult['data'][$index]['close'] - $apiResult['data'][$index]['open'])) / $apiResult['data'][$index]['open'], 2),
-                        'date' => Carbon::yesterday()->toDateString()
-                    ]);
-
+                $difference = round($apiResult['data'][$index]['close'] - $apiResult['data'][$index]['open'], 2);
+                Stock::create([
+                    'symbol' => $apiResult['data'][$index]['symbol'],
+                    'name' => $symbols[$apiResult['data'][$index]['symbol']],
+                    'price' => $apiResult['data'][$index]['close'],
+                    'open' => $apiResult['data'][$index]['open'],
+                    'close' => $apiResult['data'][$index]['close'],
+                    'high' => $apiResult['data'][$index]['high'],
+                    'low' => $apiResult['data'][$index]['low'],
+                    'difference' => $difference,
+                    'percentage' => round((100 * ($apiResult['data'][$index]['close'] - $apiResult['data'][$index]['open'])) / $apiResult['data'][$index]['open'], 2),
+                    'date' => Carbon::yesterday()->toDateString()
+                ]);
 
 
             }
@@ -315,7 +312,6 @@ class IndexController extends Controller
         }
         $current_stocks = (new Stock)->take(100)->get();
         $current_news = (new News)->where('created_at', '>=', Carbon::now()->subMinutes(30)->format('Y-m-d H:i:s'))->orderBy('id', 'desc')->take(3)->get();
-
 
 
         return view('welcome', compact(['slider_configuration', 'about_configuration', 'service_configurations', 'footer_configuration', 'choose_configuration', 'heading', 'current_stocks', 'current_news']));
@@ -359,12 +355,50 @@ class IndexController extends Controller
 
 
     }
+
     public function getIpoReadinessDoc()
     {
         $footer_configuration = FooterConfiguration::first();
         $current_stocks = (new Stock)->where('date', \Illuminate\Support\Carbon::yesterday()->toDateString())->get();
-        return view('ipo-readiness', compact('footer_configuration','current_stocks'));
+        return view('ipo-readiness', compact('footer_configuration', 'current_stocks'));
     }
+
+    public function getRecentIpos()
+    {
+        $footer_configuration = FooterConfiguration::first();
+        $ipos = Ipos::all();
+        $current_stocks = (new Stock)->where('date', \Illuminate\Support\Carbon::yesterday()->toDateString())->get();
+        return view('recent-ipos', compact('footer_configuration', 'current_stocks', 'ipos'));
+    }
+
+    public function searchRecentIpos(Request $request)
+    {
+        $condition = [];
+        $closing_date = '';
+        $offering_date = '';
+        if ($request->has('market_type')) {
+            $condition = ['market_type' => $request->market_type];
+
+        }
+        if ($request->has('instrument')) {
+            $condition += ['instrument' => $request->instrument];
+        }
+        if ($request->has('closing_date') && $request->has('offering_date')) {
+           $closing_date = Carbon::createFromFormat('Y/m/d', $request->closing_date)->format('Y-m-d');
+           $offering_date = Carbon::createFromFormat('Y/m/d', $request->offering_date)->format('Y-m-d');
+
+        } else {
+            return redirect()->back()->withInput()->with('error', 'Please select both closing and offering date.');
+        }
+        $input = $request->all();
+
+        $ipos = Ipos::where($condition)->where('offering_date', '>=', $offering_date)->where('closing_date', '<=', $closing_date)->get();
+        $footer_configuration = FooterConfiguration::first();
+        $current_stocks = (new Stock)->where('date', \Illuminate\Support\Carbon::yesterday()->toDateString())->get();
+        return view('recent-ipos', compact('footer_configuration', 'current_stocks', 'ipos','input'));
+    }
+
+
     public function getNews()
     {
         $current_news = (new News)::orderBy('id', 'DESC')->take(10)->get();
@@ -375,6 +409,7 @@ class IndexController extends Controller
 
 
     }
+
     public function getChooseUs()
     {
         $choose_configuration = ChooseUsConfiguration::first();
@@ -396,23 +431,25 @@ class IndexController extends Controller
 
 
     }
+
     public function getContactUs()
     {
 
         $footer_configuration = FooterConfiguration::first();
         $current_stocks = (new Stock)->where('date', \Illuminate\Support\Carbon::yesterday()->toDateString())->get();
-        return view('contact-us', compact(['footer_configuration','current_stocks']));
+        return view('contact-us', compact(['footer_configuration', 'current_stocks']));
 
     }
+
     public function getBlogDetail($slug)
     {
         $footer_configuration = FooterConfiguration::first();
         $current_stocks = (new Stock)->where('date', \Illuminate\Support\Carbon::yesterday()->toDateString())->get();
-        $url = env('BASE_URL').'/blogs/'.$slug;
-        $blog = News::where('url',$url)->first();
-        $current_news = (new News)->where('url','!=',$url)->orderBy('id', 'desc')->take(5)->get();
+        $url = env('BASE_URL') . '/blogs/' . $slug;
+        $blog = News::where('url', $url)->first();
+        $current_news = (new News)->where('url', '!=', $url)->orderBy('id', 'desc')->take(5)->get();
 
-        return view('blog-detail', compact('blog','footer_configuration','current_stocks','current_news'));
+        return view('blog-detail', compact('blog', 'footer_configuration', 'current_stocks', 'current_news'));
 
 
     }

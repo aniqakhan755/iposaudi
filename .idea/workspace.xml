@@ -21,10 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dbddb829-861a-4aa2-878b-2bcd5d9378d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteConfigurationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteConfigurationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/side-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/side-menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contact-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contact-us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/includes/ipo-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/includes/ipo-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/manage-ipos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/manage-ipos.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +225,9 @@
       <workItem from="1629967278052" duration="3638000" />
       <workItem from="1629991382190" duration="935000" />
       <workItem from="1630227775994" duration="17433000" />
-      <workItem from="1630423711663" duration="8036000" />
+      <workItem from="1630423711663" duration="8604000" />
+      <workItem from="1630501600985" duration="2868000" />
+      <workItem from="1630567031859" duration="9239000" />
     </task>
     <servers />
   </component>
@@ -244,18 +247,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="714" y="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1628284779058">
+    <state x="714" y="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1630567183341">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="714" y="384" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1628284779058" />
-    <state x="690" y="334" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1629187541399">
+    <state x="714" y="384" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1630567183341" />
+    <state x="690" y="334" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1630575251417">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="690" y="334" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1629187541399" />
-    <state x="740" y="334" key="FileChooserDialogImpl" timestamp="1630251745431">
+    <state x="690" y="334" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1630575251417" />
+    <state x="740" y="334" key="FileChooserDialogImpl" timestamp="1630567038306">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="740" y="334" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1630251745431" />
+    <state x="740" y="334" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1630567038306" />
     <state x="561" y="190" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1629746822031">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -264,10 +267,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="5" y="-27" width="1893" height="1148" maximized="true" key="dock-window-1/0.0.1920.1160@0.0.1920.1160" timestamp="1628112596508" />
-    <state x="666" y="308" width="591" height="564" key="find.popup" timestamp="1630428151948">
+    <state x="666" y="308" width="591" height="564" key="find.popup" timestamp="1630575575456">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="666" y="308" width="591" height="564" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1630428151948" />
+    <state x="666" y="308" width="591" height="564" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1630575575456" />
     <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1627148330072">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

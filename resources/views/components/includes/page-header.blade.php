@@ -44,6 +44,7 @@
                                         <li><a href="{{route('services.read-more')}}">Services</a></li>
                                         <li><a href="{{route('choose-us.read-more')}}">Choose Us</a></li>
                                         <li><a href="{{route('ipo.readiness')}}">IPO Readiness</a></li>
+                                        <li><a href="{{route('ipo.recent')}}">Recent IPOs</a></li>
 {{--                                        <li><a href="#rs-blog">Latest</a></li>--}}
                                         <li><a href="{{route('ipo-saudi.contact-us')}}">Contact</a></li>
                                     </ul> <!-- //.nav-menu -->

@@ -25,6 +25,8 @@ Route::get('/get-choose-us', [App\Http\Controllers\IndexController::class, 'getC
 Route::get('/latest-posts', [App\Http\Controllers\IndexController::class, 'getLatestPosts'])->name('iposaudi.latest-posts');
 Route::post('/iposaudi-contact', [App\Http\Controllers\IndexController::class, 'postContact'])->name('iposaudi.contact');
 Route::get('/ipo-readiness', [App\Http\Controllers\IndexController::class, 'getIpoReadinessDoc'])->name('ipo.readiness');
+Route::get('/recent-ipos', [App\Http\Controllers\IndexController::class, 'getRecentIpos'])->name('ipo.recent');
+Route::post('/recent-ipos-search', [App\Http\Controllers\IndexController::class, 'searchRecentIpos'])->name('recent-ipo.search');
 
 Auth::routes();
 

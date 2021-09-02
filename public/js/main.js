@@ -147,7 +147,7 @@ $(function () {
   $('input.single-daterange').daterangepicker({
     "singleDatePicker": true,
     locale: {
-      format: 'DD/MM/YYYY'
+      format: 'YYYY/MM/DD'
     }
   });
   $('input.multi-daterange').daterangepicker({
